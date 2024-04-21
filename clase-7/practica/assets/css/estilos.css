@@ -1,0 +1,32 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    background-color: #252525;
+    display: inline-block;
+    padding-right: 10px;
+}
+ul { 
+    list-style-image: url("../images/list.png");
+}
+
+.clases{
+    list-style-image: url("../images/flechabajo.png");
+    color: #fff;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.imagenes{
+    list-style-image: url("../images/img.png");
+}
+
+.cerrado{
+    list-style-image: url("../images/flechader.png");
+}
+
+.css{
+    list-style-image: url("../images/css.png");
+}
