@@ -2,9 +2,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 nav {
-    background-color: #252525;
+    background-color: #252526;
     display: inline-block;
     padding-right: 10px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 18px;
 }
 ul { 
     list-style-image: url("../images/list.png");
@@ -12,11 +15,11 @@ ul {
 
 .clases{
     list-style-image: url("../images/flechabajo.png");
-    color: #fff;
+
 }
 a{
-    color: #fff;
     text-decoration: none;
+    color: #ccc;
 }
 
 .imagenes{
@@ -29,4 +32,10 @@ a{
 
 .css{
     list-style-image: url("../images/css.png");
+}
+.git{
+    list-style-image: url("../images/git.png");
+}
+.text{
+    list-style-image: url("../images/text.png");
 }
