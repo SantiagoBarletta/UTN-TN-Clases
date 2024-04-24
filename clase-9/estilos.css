@@ -55,15 +55,15 @@ section{
 }
 
 .color-card .controles .btn-like{
-    height: 30px;
-    padding: 0 10px ;
+    height: 38px;
+    padding: 0 14px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
     background-color: #F9f9f9;
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    border-radius: 8px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
     gap: 5px;
 }
 
