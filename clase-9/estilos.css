@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+section{
+    display: flex;
+    width: 70%;
+    gap: 30px;
+    justify-content: space-around;
+    padding: 50px;
+}
+.color-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    gap: 20px;
+}
+
+.color-card .colores{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow:hidden;
+}
+.color-card .colores .color:nth-child(1){
+    height: 40%;
+    
+}
+.color-card .colores .color:nth-child(2){
+    height: 30%;
+}
+.color-card .colores .color:nth-child(3){
+    width: 100%;
+    height: 17%;
+}
+.color-card .colores .color:nth-child(4){
+    height: 13%;
+}
+
+.color-card .controles{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-card .controles .btn-like{
+    height: 30px;
+    padding: 0 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: #F9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 8px;
+    gap: 5px;
+}
+
+.color-card .controles .time{
+    color: #9D9D9D;
+    font-size: 14px;
+}
