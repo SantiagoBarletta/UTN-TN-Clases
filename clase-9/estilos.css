@@ -68,6 +68,6 @@ section{
 }
 
 .color-card .controles .time{
-    color: #9D9D9D;
-    font-size: 14px;
+    color: hsla(0, 0%, 0%, 0.7);
+    font-size: 12px;
 }
