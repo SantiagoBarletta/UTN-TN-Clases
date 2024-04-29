@@ -99,11 +99,17 @@ h1{
 }
 
 .ver-mas{
-    border: 2px solid #5D3BE6;
+    background-color: #FFFFFF;
+    border: 2px solid #673de6;
     border-radius: 8px;
     padding: 12px 48px;
     margin: 45px 0;
-    color: #5D3BE6;
+    color: #673de6;
     font-size: 16px;
     font-weight: 800;
+    cursor: pointer;
+}
+
+.ver-mas:hover{
+    background-color: #F4F5FF;
 }
