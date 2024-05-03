@@ -1,0 +1,169 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    ;
+    font-size: 14px;
+}
+
+
+/*MENU HOSTINGER*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu {
+    background-color: white;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0px 4px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+.menu nav {
+    display: none;
+}
+
+.menu i {
+    display: flex;
+    font-size: 2em;
+}
+
+.logo-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.logo-container .logo {
+    width: 9em;
+}
+
+.links-container {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 25px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.links-container .link {
+    text-decoration: none;
+
+}
+
+.btn-link {
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 900;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.btn-link:hover {
+    color: gray;
+}
+
+.bandera {
+    border-radius: 3px;
+    width: 32px;
+    height: 20px;
+}
+
+.español {
+    font-size: 16px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    display: none;
+    gap: 5px;
+}
+
+/*FIN MENU HOSTINGER*/
+
+/*SECCION 'MANTENE TU SITIO SEGURO EN TODO MOMENTO'*/
+main {
+    padding-top: 45px;
+    background-color: #683ee6;
+}
+
+.container-seguro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.presentacion img {
+    width: 80vw;
+}
+.presentacion .text-container ul {
+    list-style:none;
+    padding-left: 15px;
+}
+.presentacion .text-container ul li{
+    list-style-image: url("../img/check-lg.svg");
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.opiniones {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+
+.opiniones .card {
+    background-color: #5126d1;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 95%;
+}
+
+.opiniones .card img {
+    width: 15em;
+}
+
+.opiniones .card a {
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (min-width: 320px) {
+    .container-seguro .presentacion .text-container li {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .container-seguro {
+        max-width: 800px;
+    }
+}
