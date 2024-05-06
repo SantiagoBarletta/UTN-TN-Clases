@@ -35,7 +35,7 @@ header {
 }
 
 .menu i {
-    display:inline-block;
+    display: inline-block;
     font-size: 2em;
 }
 
@@ -97,7 +97,7 @@ header {
 /*SECCION 'MANTENE TU SITIO SEGURO EN TODO MOMENTO'*/
 main {
     padding-top: 45px;
-    background-color: #683ee6;
+    background-color: #673de6;
 }
 
 .container-seguro {
@@ -122,6 +122,7 @@ main {
     display: flex;
     margin-bottom: 24px;
 }
+
 .title {
     font-size: 1.5em;
     margin-bottom: 32px;
@@ -165,27 +166,41 @@ main {
 @media screen and (min-width: 1050px) {}
 
 @media screen and (min-width: 1600px) {
-    main{
+    main {
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
-    .container-seguro{
+
+    .container-seguro {
         max-width: 1208px;
     }
-    .menu nav{
+
+    .español {
         display: flex;
-        padding-right: 10px ;
     }
-    .menu i{
+
+    .menu {
+        padding: 20px 40px;
+    }
+
+    .menu nav {
+        display: flex;
+    }
+
+    .menu i {
         font-size: 1em;
     }
-    .menu .bi-list{
+
+    .menu .bi-list {
         display: none;
     }
+
     .presentacion {
         flex-direction: row-reverse;
         padding-top: 45px;
-        gap: 50px;
+        gap: 70px;
     }
 
     .presentacion img {
@@ -193,20 +208,23 @@ main {
     }
 
     .presentacion .text-container {
-        width: 40.43%;
+        width: 38%;
     }
+
     .title {
-        font-size: 36px;
+        font-size: 2.8em;
         margin-bottom: 32px;
     }
 
-    .item {
-        font-size: 16px;
+    .item p {
+        font-size: 1.2em;
     }
+
     .item .icon {
         width: 24px;
         height: 24px;
     }
+
     .opiniones {
         flex-direction: row;
         justify-content: center;
@@ -220,5 +238,14 @@ main {
     .opiniones .card .opinion {
         font-size: 1.2em;
 
+    }
+
+    .logo-container .logo{
+        width: 147px;
+        height: 30px;
+    }
+
+    .menu nav .link{
+        font-size: 1.2em;
     }
 }
