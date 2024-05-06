@@ -35,7 +35,7 @@ header {
 }
 
 .menu i {
-    display: flex;
+    display:inline-block;
     font-size: 2em;
 }
 
@@ -117,16 +117,14 @@ main {
 .presentacion img {
     width: 80vw;
 }
-.presentacion .text-container ul {
-    list-style:none;
-    padding-left: 15px;
-}
-.presentacion .text-container ul li{
-    list-style-image: url("../img/check-lg.svg");
-}
 
+.item {
+    display: flex;
+    margin-bottom: 24px;
+}
 .title {
     font-size: 1.5em;
+    margin-bottom: 32px;
 }
 
 .opiniones {
@@ -162,8 +160,65 @@ main {
     }
 }
 
-@media screen and (min-width: 650px) {
-    .container-seguro {
-        max-width: 800px;
+@media screen and (min-width: 650px) {}
+
+@media screen and (min-width: 1050px) {}
+
+@media screen and (min-width: 1600px) {
+    main{
+        display: flex;
+        justify-content: center;
+    }
+    .container-seguro{
+        max-width: 1208px;
+    }
+    .menu nav{
+        display: flex;
+        padding-right: 10px ;
+    }
+    .menu i{
+        font-size: 1em;
+    }
+    .menu .bi-list{
+        display: none;
+    }
+    .presentacion {
+        flex-direction: row-reverse;
+        padding-top: 45px;
+        gap: 50px;
+    }
+
+    .presentacion img {
+        max-width: 552px;
+    }
+
+    .presentacion .text-container {
+        width: 40.43%;
+    }
+    .title {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .item {
+        font-size: 16px;
+    }
+    .item .icon {
+        width: 24px;
+        height: 24px;
+    }
+    .opiniones {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .opiniones .card {
+        width: 360px;
+        height: 270px;
+    }
+
+    .opiniones .card .opinion {
+        font-size: 1.2em;
+
     }
 }
