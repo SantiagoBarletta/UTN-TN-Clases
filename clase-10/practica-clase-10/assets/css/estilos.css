@@ -96,26 +96,28 @@ header {
 
 /*SECCION 'MANTENE TU SITIO SEGURO EN TODO MOMENTO'*/
 main {
-    padding-top: 45px;
+    padding-top: 55px;
     background-color: #673de6;
+
 }
 
 .container-seguro {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .presentacion {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
     justify-content: center;
+    padding: 10px;
 }
 
 .presentacion img {
-    width: 80vw;
+    width: 100vw;
 }
 
 .item {
@@ -132,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .opiniones .card {
@@ -169,12 +171,10 @@ main {
     main {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100vh;
     }
 
     .container-seguro {
-        max-width: 1208px;
+        max-width: 1200px;
     }
 
     .español {
@@ -199,7 +199,7 @@ main {
 
     .presentacion {
         flex-direction: row-reverse;
-        padding-top: 45px;
+        padding-top: 50px;
         gap: 70px;
     }
 
