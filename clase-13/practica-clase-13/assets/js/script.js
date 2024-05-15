@@ -11,8 +11,8 @@ else {
 
 /*2*/
 
-let genero = hombre;
-if (genero == hombre) {
+let genero = 'hombre';
+if (genero == 'hombre') {
     console.log ("Eres Hombre");
 }
 else {
@@ -38,10 +38,10 @@ let num2 = prompt("Ingrese el segundo número:");
 let num3 = prompt("Ingrese el tercer número:");
 let num4 = prompt("Ingrese el cuarto número:");
 
-num1 = parseFloat(numero1);
-num2 = parseFloat(numero2);
-num3 = parseFloat(numero3);
-num4 = parseFloat(numero4);
+num1 = parseFloat(num1);
+num2 = parseFloat(num2);
+num3 = parseFloat(num3);
+num4 = parseFloat(num4);
 
 if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
     console.log("Uno o más valores ingresados no son válidos. Por favor, ingrese números válidos.");
@@ -49,9 +49,8 @@ if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
     var resultado1 = num1 + num2;
     var resultado2 = num3 * num4;
 
-    // Mostramos los resultados por pantalla
-    console.log("La suma de los dos primeros números es: " + suma);
-    console.log("La multiplicación del tercer y cuarto número es: " + multiplicacion);
+    console.log("La suma de los dos primeros números es: " + resultado1);
+    console.log("La multiplicación del tercer y cuarto número es: " + resultado2);
 }
 
 /*5*/
