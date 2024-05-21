@@ -13,7 +13,7 @@ let producto = {
     marca: 'Lucky Strike'
 };
 
-let persona = {
+const persona = {
     nombre: 'Santiago',
     edad: 43,
     mejorAmigo : {
@@ -21,5 +21,14 @@ let persona = {
         edad: 40
     }
 };
+persona.mejorAmigo.nombre = 'Pepe'
 
-document.write(persona.mejorAmigo.nombre);
+
+const persona2 = {
+    nombre: 'pepe',
+}
+persona2.nroCelular = '+5492323651004';
+
+console.log(persona);
+
+document.write(persona.nombre);
