@@ -31,15 +31,20 @@ const nombres = [
     'pedro',
     'valentina',
     'alex'
-]
+];
 
 function eliminarNombre(nombre) {
     const posicion = nombres.indexOf(nombre);
-    nombres.splice(posicion, 1);
+    if (posicion !== -1) {
+        nombres.splice(posicion, 1);
+    } else {
+        console.log("El nombre no se encontró en la lista.");
+    }
 }
 
-let nombreEliminar = prompt('Ingrese el nombre que desea eliminar');
+let nombreEliminar = prompt('Lista de nombres: ' + nombres + '\nIngrese el nombre que desea eliminar');
 eliminarNombre(nombreEliminar);
 
-
-document.write(nombres);
+for (let i = 0; i < nombres.length; i++) {
+    document.write(nombres[i] + '<br>');
+}
