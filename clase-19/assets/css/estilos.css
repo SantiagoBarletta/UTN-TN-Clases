@@ -1,0 +1,53 @@
+#historial-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+#historial-container div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#historial-container div:hover {
+    background-color: #f1f1f1;
+}
+
+#historial-container span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#historial-container h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#historial-container hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* TAREA boton */
+
+.activo {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.inactivo {
+    background-color: #f44336;
+    color: white;
+}
+
+#boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

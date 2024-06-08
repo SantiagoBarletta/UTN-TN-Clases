@@ -70,6 +70,11 @@ let usuario = login();
 console.log(usuario);
 
 /* Función de Cálculo */
+let historial = [];
+
+if (obtenerHistorial() == null) {
+    localStorage.setItem('historial', JSON.stringify([]));
+}
 
 function calcular(operacion, numero1, numero2) {
     let resultado;
@@ -86,10 +91,11 @@ function calcular(operacion, numero1, numero2) {
 
 /* Función para agregar al historial */
 
-let historial = [];
 
 function agregarAlHistorial(accion, operacion, a, b, resultado) {
+    const historial = obtenerHistorial();
     historial.push({ accion, operacion, a, b, resultado });
+    localStorage.setItem('historial', JSON.stringify(historial));
 }
 
 /* Función para renderizar el historial */
@@ -118,15 +124,35 @@ function calculadora() {
 
 calculadora();
 
-console.log(renderizarHistorial(historial))
+// console.log(renderizarHistorial(historial))
 
 function obtenerHistorial() {
-    return historial;
+    let historialString = localStorage.getItem('historial');
+    const historial = JSON.parse(historialString);
 }
 
-let datoImportante = 'el mate se toma amargo';
 
-localStorage.setItem('importante:', datoImportante);
 
-localStorage.getItem(importante)
+// let datoImportante = 'el mate se toma amargo';
 
+// localStorage.setItem('importante:', datoImportante);
+
+// localStorage.getItem(importante)
+
+
+// let string ='{"username" : "pepe"}';
+// let objeto = JSON.parse(string);
+// console.log(objeto)
+
+// let objeto = {
+//     username: 'pepe',
+//     edad: 70
+// }
+// let string = JSON.stringify(objeto);
+// console.log(string)
+// let objeto2 = JSON.parse(string);
+// console.log(objeto2)
+
+
+// const historialString = JSON.stringify(historial);
+// alert(historialString);

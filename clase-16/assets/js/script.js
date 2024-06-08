@@ -53,25 +53,25 @@
 
 // let resultado = '';
 
-// const personajes = [
-//     { nombre: 'Santiago', apellido: 'Barletta', edad: 43 },
-//     { nombre: 'Daiana', apellido: 'Juan', edad: 31 },
-//     { nombre: 'Pablo', apellido: 'Pereyra', edad: 48 },
-// ];
-
-// for (const persona of personajes) {
-//     for (const propiedad in persona) {
-//         document.write('<span>' + propiedad + ':' + persona[propiedad] + '</span> \n');
-//     }
-
-// }
-////////////FOREACH/////////////////////
-
 const personajes = [
     { nombre: 'Santiago', apellido: 'Barletta', edad: 43 },
     { nombre: 'Daiana', apellido: 'Juan', edad: 31 },
     { nombre: 'Pablo', apellido: 'Pereyra', edad: 48 },
 ];
+
+for (const persona of personajes) {
+    for (const propiedad in persona) {
+        document.write('<span>' + propiedad + ':' + persona[propiedad] + '</span> \n');
+    }
+
+}
+////////////FOREACH/////////////////////
+
+// const personajes = [
+//     { nombre: 'Santiago', apellido: 'Barletta', edad: 43 },
+//     { nombre: 'Daiana', apellido: 'Juan', edad: 31 },
+//     { nombre: 'Pablo', apellido: 'Pereyra', edad: 48 },
+// ];
 
 // personajes.forEach(function (personaje){
 //     document.write('Hola mi nombre es ' + personaje.nombre + ' ' + personaje.apellido + ' y tengo ' + personaje.edad + ' años <hr>');
@@ -115,16 +115,16 @@ const personajes = [
 // console.log(productosTv)
 
 
-const productos = [
-    {  id: 1, nombre: 'Monitor 20 Pulgadas', marca: 'Samsung', precio: 5000 },
-    {  id: 2, nombre: 'Televisión 50 Pulgadas', marca: 'Noblex', precio: 7000 },
-    {  id: 3, nombre: 'Tablet', marca: 'Apple',precio: 3000 },
-    {  id: 4, nombre: 'Audifonos', marca: 'Sony',precio: 2000 },
-    {  id: 5, nombre: 'Teclado', marca: 'Logitech',precio: 5000 },
-    {  id: 6, nombre: 'Celular', marca: 'Noblex',precio: 5000 },
-    {  id: 7, nombre: 'Televisión 59 Pulgadas', marca: 'LG',precio: 1000 },
-    {  id: 8, nombre: 'Laptop', marca: 'Apple',precio: 2000 },
-]
+// const productos = [
+//     {  id: 1, nombre: 'Monitor 20 Pulgadas', marca: 'Samsung', precio: 5000 },
+//     {  id: 2, nombre: 'Televisión 50 Pulgadas', marca: 'Noblex', precio: 7000 },
+//     {  id: 3, nombre: 'Tablet', marca: 'Apple',precio: 3000 },
+//     {  id: 4, nombre: 'Audifonos', marca: 'Sony',precio: 2000 },
+//     {  id: 5, nombre: 'Teclado', marca: 'Logitech',precio: 5000 },
+//     {  id: 6, nombre: 'Celular', marca: 'Noblex',precio: 5000 },
+//     {  id: 7, nombre: 'Televisión 59 Pulgadas', marca: 'LG',precio: 1000 },
+//     {  id: 8, nombre: 'Laptop', marca: 'Apple',precio: 2000 },
+// ]
 
 // const productosBaratos = []
 // for(const producto of productos){
@@ -140,8 +140,8 @@ const productos = [
 // console.log(pepe)
 
 
-const mapProductos = productos.map(function(producto){
-    return '<div>' + producto.nombre + '</div>';
-});
+// const mapProductos = productos.map(function(producto){
+//     return '<div>' + producto.nombre + '</div>';
+// });
 
-document.write(mapProductos.join(''));
+// document.write(mapProductos.join(''));
