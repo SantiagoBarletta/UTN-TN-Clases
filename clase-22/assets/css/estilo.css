@@ -1,0 +1,32 @@
+.container-peliculas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pelicula {
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 16px; 
+    margin: 16px; 
+    max-width: 300px;
+    background-color: #fff; 
+    text-align: center; 
+}
+
+.pelicula h1 {
+    font-size: 1.5em; 
+    margin-bottom: 12px; 
+}
+
+.pelicula img {
+    max-width: 100%; 
+    border-radius: 8px; 
+    margin-bottom: 12px;
+}
+
+.pelicula p {
+    font-size: 1em; 
+    color: #666; 
+    
+}
