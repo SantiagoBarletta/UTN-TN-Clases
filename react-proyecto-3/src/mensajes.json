@@ -1,27 +1,26 @@
-[
+  [
     {
-      "id": 1,
-      "autor": "Sergio",
-      "texto": "Hola",
-      "estado": "recibido",
-      "dia": "hoy",
-      "hora": "10:00"
+        "autor": "yo",
+        "texto": "texto de mensaje",
+        "estado": "visto",
+        "dia": "hoy",
+        "hora": "13:15",
+        "id": "1"
     },
     {
-      "id": 2,
-      "autor": "Yo",
-      "texto": "Hola Sergio",
-      "estado": "enviado",
-      "dia": "hoy",
-      "hora": "10:01"
+        "autor": "pepe",
+        "texto": "Hola que tal?",
+        "estado": "visto",
+        "dia": "hoy",
+        "hora": "13:16",
+        "id": "2"
     },
     {
-      "id": 3,
-      "autor": "Sergio",
-      "texto": "Que tal",
-      "estado": "recibido",
-      "dia": "hoy",
-      "hora": "10:02"
+        "autor": "yo",
+        "texto": "Sos real? OMG",
+        "estado": "visto",
+        "dia": "hoy",
+        "hora": "13:17",
+        "id": "3"
     }
-  ]
-  
+]

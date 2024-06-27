@@ -1,0 +1,7 @@
+.chat-screens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: image-set(./src/Componets/Contactos/fondo.jpg);
+    width: 1200px;
+}
