@@ -27,7 +27,7 @@
   {
     "autor": "yo",
     "texto": "Bien, todo tranquilo. ¿es verdad que tenés una colección de tarjetas rojas en tu casa?",
-    "estado": "no entregado",
+    "estado": "entregado",
     "dia": "hoy",
     "hora": "13:17",
     "id": "4"
@@ -35,7 +35,7 @@
   {
     "autor": "yo",
     "texto": "me bloqueaste?",
-    "estado": "no entregado",
+    "estado": "noEntregado",
     "dia": "hoy",
     "hora": "13:17",
     "id": "4"
