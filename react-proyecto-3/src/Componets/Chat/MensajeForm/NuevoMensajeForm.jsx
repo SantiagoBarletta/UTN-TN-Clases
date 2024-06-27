@@ -9,4 +9,4 @@ function NuevoMensajeForm() {
     </div>
   )
 }
-export { NuevoMensajeForm } 
+export default NuevoMensajeForm 

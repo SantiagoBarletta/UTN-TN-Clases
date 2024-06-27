@@ -1,5 +1,5 @@
 import React from "react"
-import { ChatHeader, Chat, NuevoCorreoForm } from "../Componets"
+import { ChatHeader, Chat, NuevoMensajeForm } from "../Componets"
 import "./ChatScreens.css"
 
 

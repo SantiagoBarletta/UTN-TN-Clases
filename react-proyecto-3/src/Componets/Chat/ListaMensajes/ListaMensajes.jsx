@@ -9,4 +9,4 @@ function Chat() {
       </div>
     )
   }
-  export {Chat}
+  export default Chat;

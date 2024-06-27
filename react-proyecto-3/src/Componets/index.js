@@ -3,6 +3,6 @@ import Chat from "./Chat/ListaMensajes/ListaMensajes"
 import NuevoMensajeForm from "./Chat/MensajeForm/NuevoMensajeForm"
 
 
-export { ChatHeader, Chat, NuevoCorreoForm }
+export { ChatHeader, Chat, NuevoMensajeForm }
 
 
