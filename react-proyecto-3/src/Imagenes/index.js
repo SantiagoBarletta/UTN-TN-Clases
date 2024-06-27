@@ -5,4 +5,4 @@ import visto from './visto.png';
 import entregado from './entregado.png';
 import noEntregado from './noEntregado.png';
 
-export { fondo1, fondo2, pepe, visto, entregado, noEntregado };
+export  { fondo1, fondo2, pepe, visto, entregado, noEntregado };

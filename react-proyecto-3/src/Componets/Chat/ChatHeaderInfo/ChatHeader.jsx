@@ -1,6 +1,6 @@
 import React from "react"
 import './ChatHeader.css'
-import pepe from '../../../Imagenes'
+import { pepe } from '../../../Imagenes'
 
 function ChatHeader() {
   return (
