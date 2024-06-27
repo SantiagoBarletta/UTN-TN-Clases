@@ -9,7 +9,7 @@ const Mensaje = ({ mensaje }) => {
         {MOOK_MENSAJES.map(mensaje => (
           <div key={mensaje.id} className={`mensaje ${mensaje.autor}`}>
             <p className="mensaje-texto"><strong>{mensaje.autor}</strong></p>
-            <p > {mensaje.texto}</p>
+            <p className="mensaje-texto"> {mensaje.texto}</p>
             <p className="mensaje-info">Hora: {mensaje.hora}</p>
           </div>
         ))}

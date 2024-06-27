@@ -1,7 +1,16 @@
 .chat-screens {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: image-set(./src/Componets/Contactos/fondo.jpg);
-    width: 1200px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: image-set("./src/Componets/Contactos/fondo.jpg");
+  background-size: cover; 
+  width: 400px;
+  height: 800px;
+  margin: 0 auto;
+  border: 16px solid #000;
+  border-radius: 36px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
+

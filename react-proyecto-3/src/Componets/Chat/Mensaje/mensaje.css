@@ -1,19 +1,20 @@
 
   .mensaje {
     display: inline-block;
-    width: 50%;
-    background-color: #dcf8c6; 
+    width: 70%;
+    background-color: #ccc; 
     color: #075e54; 
     padding: 10px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px 10px;
   }
   
   .mensaje.yo {
     background-color: #DCF8C6; 
     color: #075e54; 
-    text-align: right; 
-    width: 50%;
+    text-align: right;
+    margin-left: 20% !important;
+    width: 70%;
     margin-left: 10%;
   }
   
