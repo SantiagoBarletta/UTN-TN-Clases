@@ -1,0 +1,27 @@
+
+  .mensaje {
+    display: inline-block;
+    max-width: 70%;
+    background-color: #dcf8c6; 
+    color: #075e54; 
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  .mensaje.enviado {
+    background-color: #DCF8C6; 
+    color: #075e54; 
+    text-align: right; 
+  }
+  
+  .mensaje-texto {
+    margin: 0;
+  }
+  
+  .mensaje-info {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
