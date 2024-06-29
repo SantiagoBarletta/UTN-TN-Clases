@@ -8,5 +8,5 @@ function NuevoMensajeForm() {
       <button>Enviar</button>
     </div>
   )
+  export default NuevoMensajeForm 
 }
-export default NuevoMensajeForm 
