@@ -1,12 +1,29 @@
-import React from "react"
-import './NuevoMensajeForm.css'
+import React, { useState } from "react";
+import './NuevoMensajeForm.css';
+import { SendFill } from "react-bootstrap-icons";
 
-function NuevoMensajeForm() {
+function NuevoMensajeForm({ handleSubmitNuevoMsj }) {
+  const [mensaje, setMensaje] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSubmitNuevoMsj(mensaje);
+    setMensaje("");  
+  };
+
   return (
-    <div className="input-container">
-      <input type="text" placeholder="Mensaje" />
-      <button>Enviar</button>
-    </div>
-  )
-  export default NuevoMensajeForm 
+    <form onSubmit={handleSubmit}>
+      <div className="input-container">
+      <input 
+          type="text" 
+          placeholder="Mensaje" 
+          value={mensaje} 
+          onChange={(e) => setMensaje(e.target.value)} 
+        />
+        <button type="submit"><SendFill /></button>
+      </div>
+    </form>
+  );
 }
+
+export default NuevoMensajeForm;

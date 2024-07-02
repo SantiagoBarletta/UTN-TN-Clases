@@ -3,23 +3,45 @@
     align-items: center;
     background-color: #075e54;
     color: white;
-    padding: 10px;
-    
+    padding: 15px;
+    width: 100%;
+    justify-content: space-between; 
 }
+
 .chat-header img {
     border-radius: 50%;
     width: 40px;
     margin-right: 10px;
 }
+
 .chat-header .contact-info {
     display: flex;
     flex-direction: column;
 }
+
 .chat-header .contact-info .contact-name {
     font-weight: bold;
     font-size: 16px;
 }
+
 .chat-header .contact-info .contact-status {
     font-size: 12px;
     color: #e5ddd5;
+}
+
+.chat-header .iconos {
+    display: flex;
+    align-items: center;
+}
+
+
+.iconos svg {
+    margin-right: 20px; 
+    font-size: 25px;
+    color: #e5ddd5; 
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
 }
