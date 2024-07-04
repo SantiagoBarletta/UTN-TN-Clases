@@ -1,12 +1,12 @@
 import React from 'react';
 import './ContactScreen.css';
-import { ContactosHeader, Contactos, ContactosFooter } from '../../Componets';
+import { ContactosHeader, ListaContactos, ContactosFooter } from '../../Componets';
 
 function ContactScreen() {
     return (
         <div className="contact-screens">
             <ContactosHeader />
-            <Contactos />
+            <ListaContactos contactos={contactos} />
             <ContactosFooter />
       </div>
     );
