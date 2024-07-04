@@ -1,3 +1,4 @@
-import ChatScreens from "./ChatScreens";
+import ChatScreens from "./Chat/ChatScreens";
+import ContactScreen from "./Contactos/ContactScreen";
 
-export default ChatScreens
+export { ChatScreens, ContactScreen }

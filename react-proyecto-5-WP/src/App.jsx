@@ -1,11 +1,18 @@
 import React from 'react';
-import ChatScreens from './Screens';
+import { ChatScreens, ContactScreen } from './Screens';
+import { Routes, Route } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div>
-      <ChatScreens />
-    </div>
+ 
+      <Routes>
+        <Route path="/" element={<ChatScreens />} />
+        <Route path="/chat" element={<ChatScreens />} />
+        <Route path="/contactos" element={<ContactScreen />} />        
+      </Routes>
+ 
   )
 }
 

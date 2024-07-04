@@ -1,0 +1,19 @@
+.contact-header {
+    display: flex;
+    align-items: center;
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    justify-content: space-between; 
+}
+
+.contact-header .iconos {
+    display: flex;
+    align-items: center;
+}
+
+.contact-header .logo{
+    font-weight: bold;
+    font-size: 18px;
+}

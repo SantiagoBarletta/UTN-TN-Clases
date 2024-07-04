@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChatHeader, Chat, NuevoMensajeForm } from '../Componets';
+import { ChatHeader, Chat, NuevoMensajeForm } from '../../Componets';
 import "./ChatScreens.css";
 
 function ChatScreens() {
