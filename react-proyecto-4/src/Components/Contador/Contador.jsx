@@ -19,7 +19,7 @@ function Contador({ limit }) {
         <button onClick={handleIncrementar}>Comprar</button>
       ) : (
         <>
-          <button onClick={handleDecrementar}>-</button>
+        <button onClick={handleDecrementar}>-</button>
           <span>Contador: {contador}</span>
           {
             contador === limit ? <span>Limite alcanzado</span> : 

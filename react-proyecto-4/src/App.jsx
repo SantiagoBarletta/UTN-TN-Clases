@@ -4,6 +4,7 @@ import { FormularioColor } from "./Components/FormularioColor/FormularioColor";
 
 // Importa el archivo JSON
 import Card from "./Components/ColorCard/Card.json";
+import Contador from "./Components/Contador/Contador";
 
 function App() {
   const [colorCards, setColorCards] = useState([]);

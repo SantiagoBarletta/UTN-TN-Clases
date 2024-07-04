@@ -1,0 +1,63 @@
+[
+    {
+      "titulo": "Smartphone XYZ",
+      "precio": 299.99,
+      "id": 1,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Laptop Ultra 2024",
+      "precio": 899.99,
+      "id": 2,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Tablet ProMax",
+      "precio": 499.99,
+      "id": 3,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Smartwatch Connect",
+      "precio": 149.99,
+      "id": 4,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Cámara Digital 4K",
+      "precio": 599.99,
+      "id": 5,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Auriculares Inalámbricos X",
+      "precio": 79.99,
+      "id": 6,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Consola de Juegos NextGen",
+      "precio": 399.99,
+      "id": 7,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Router WiFi UltraSpeed",
+      "precio": 129.99,
+      "id": 8,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Altavoz Bluetooth Premium",
+      "precio": 89.99,
+      "id": 9,
+      "categoria": "Electronica"
+    },
+    {
+      "titulo": "Impresora Multifuncional",
+      "precio": 249.99,
+      "id": 10,
+      "categoria": "Electronica"
+    }
+  ]
+  
