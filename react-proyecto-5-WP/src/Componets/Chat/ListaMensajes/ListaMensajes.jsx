@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Mensaje } from "../Mensaje/Mensaje";
 import './listamensajes.css';
-import MOOK_MENSAJES from '../../../mensajes.json';
+import MOOK_MENSAJES from '../../../mensajeria.json';
 
-function Chat({ mensajes }) {
+function Chat({ mensaje }) {
   const [mensajesIniciales, setMensajesIniciales] = useState([]);
 
   useEffect(() => {
-    setMensajesIniciales(MOOK_MENSAJES);
+    setMensajesIniciales(...MOOK_MENSAJES, mensaje);
   }, []);
-
+  console.log ("nuevoMsj", mensajesIniciales.mensajes, mensaje);
   return (
     <div className="mensaje-container">
-      {[...mensajesIniciales].map((mensajes) => (
-        <Mensaje  mensaje={mensajes} />
-      ))}
+      
+      <Mensaje mensaje={mensajesIniciales} key={mensajesIniciales.id}/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ChatHeader, Chat, NuevoMensajeForm } from '../../Componets';
+import { Chat, ChatHeader, NuevoMensajeForm } from '../../Componets';
 import "./ChatScreens.css";
 
-function ChatScreens() {
+function ChatScreens({ contactoID }) {
   const [mensajes, setMensajes] = useState([]);
 
   const handleNuevoMsj = (nuevoMsj) => {
@@ -14,13 +14,12 @@ function ChatScreens() {
       dia: "hoy", 
       hora: new Date().toLocaleTimeString() 
     }]);
-    setMensajes([...mensajes, nuevoMensaje]);
   };
 
   return (
     <div className="chat-screens">
       <ChatHeader />
-      <Chat mensajes={mensajes} />
+      <Chat contactoID={contactoID} mensajes={mensajes} />
       <NuevoMensajeForm handleSubmitNuevoMsj={handleNuevoMsj} />
     </div>
   );
