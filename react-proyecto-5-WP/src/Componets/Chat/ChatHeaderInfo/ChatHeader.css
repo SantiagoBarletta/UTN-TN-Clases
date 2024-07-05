@@ -45,3 +45,10 @@
     display: flex;
     align-items: center;
 }
+
+.arrow {
+    margin-right: 10px; 
+    font-size: 20px;
+    color: #e5ddd5;
+    font-weight: 900;
+}

@@ -12,8 +12,8 @@ function Chat({ mensajes }) {
 
   return (
     <div className="mensaje-container">
-      {[...mensajesIniciales, ...mensajes].map((msj) => (
-        <Mensaje key={msj.id} mensaje={msj} />
+      {[...mensajesIniciales].map((mensajes) => (
+        <Mensaje  mensaje={mensajes} />
       ))}
     </div>
   );

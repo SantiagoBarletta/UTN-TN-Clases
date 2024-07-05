@@ -14,6 +14,7 @@ function ChatScreens() {
       dia: "hoy", 
       hora: new Date().toLocaleTimeString() 
     }]);
+    setMensajes([...mensajes, nuevoMensaje]);
   };
 
   return (

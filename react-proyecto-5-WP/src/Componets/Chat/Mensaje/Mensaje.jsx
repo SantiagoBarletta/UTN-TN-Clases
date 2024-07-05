@@ -1,20 +1,31 @@
 import React from "react";
 import './mensaje.css';
-import { visto, entregado, noEntregado } from '../../../Imagenes';
+import { useParams } from "react-router-dom";
+import contactos from "../../../mensajeria.json";
+import { imagenes } from "../../../Imagenes";
 
-const Mensaje = ({ mensaje }) => {
+
+
+const Mensaje = () => {
+  const { contactoID } = useParams();
+  const contacto = contactos.find((contacto) => contacto.id === parseInt(contactoID));
+
   return (
-    <div key={mensaje.id} className={`mensaje ${mensaje.autor}`}>
-      <p className="mensaje-texto"><strong>{mensaje.autor}</strong></p>
-      <p className="mensaje-texto">{mensaje.texto}</p>
-      <div className="mensaje-info">
-        {mensaje.hora} 
-        <img 
-          className="estado" 
-          src={mensaje.estado === 'visto' ? visto : mensaje.estado === 'entregado' ? entregado : noEntregado} 
-          alt={mensaje.estado}
-        />
-      </div> 
+    <div className="mensaje-container">
+      {contacto.mensajes.map((msj) => (
+        <div key={msj.id} className={`mensaje ${msj.autor}`}>
+          <p className="mensaje-texto"><strong>{msj.autor}</strong></p>
+          <p className="mensaje-texto">{msj.texto}</p>
+          <div className="mensaje-info">
+            {msj.hora} 
+            <img 
+              className="estado" 
+              src={msj.estado === 'visto' ? imagenes.visto : msj.estado === 'entregado' ? imagenes.entregado : imagenes.noEntregado} 
+              alt={msj.est}
+            />
+          </div> 
+        </div>
+      ))}
     </div>
   );
 }
