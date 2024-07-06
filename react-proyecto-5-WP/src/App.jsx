@@ -8,7 +8,7 @@ function App() {
   return (
  
       <Routes>
-        <Route path="/" element={<ChatScreens />} />
+        <Route path="/" element={<ContactScreen />} />
         <Route path="/chat" element={<ChatScreens />} />
         <Route path="/contactos" element={<ContactScreen />} />
         <Route path="/mensajes/:contactoID" element={<ChatScreens />} />
