@@ -1,5 +1,5 @@
 import ChatHeader from "./Chat/ChatHeaderInfo/ChatHeader"
-import Chat from "./Chat/ListaMensajes/ListaMensajes"
+import ListaMensajes from "./Chat/ListaMensajes/ListaMensajes"
 import NuevoMensajeForm from "./Chat/MensajeForm/NuevoMensajeForm"
 import Contacto from "./Contactos/Contacto/Contacto"
 import ListaContactos from "./Contactos/ListaContactos/ListaContactos"
@@ -8,6 +8,6 @@ import ContactosFooter from "./Contactos/ContactosFooter/ContactosFooter"
 
 
 
-export { ChatHeader, Chat, NuevoMensajeForm, Contacto, ListaContactos, ContactosHeader, ContactosFooter }
+export { ChatHeader, ListaMensajes, NuevoMensajeForm, Contacto, ListaContactos, ContactosHeader, ContactosFooter }
 
 

@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Mensaje } from "../Mensaje/Mensaje";
 import './listamensajes.css';
-import MOOK_MENSAJES from '../../../mensajeria.json';
+import MOCK_MENSAJES from '../../../mensajeria.json';
 
-function Chat({ mensaje }) {
+function ListaMensajes({ mensaje }) {
+  const { contactoID } = useParams();
   const [mensajesIniciales, setMensajesIniciales] = useState([]);
 
+  // Carga mensajes almacenados en el JSON
   useEffect(() => {
-    setMensajesIniciales(...MOOK_MENSAJES, mensaje);
+    const contacto = MOCK_MENSAJES.find(contacto => contacto.id === parseInt(contactoID));
+      setMensajesIniciales(contacto.mensajes);
   }, []);
-  console.log ("nuevoMsj", mensajesIniciales.mensajes, mensaje);
+
+  // Agrega el mensaje nuevo
+  useEffect(() => {
+    if (mensaje) {
+      setMensajesIniciales(mensajesPrevios => [...mensajesPrevios, mensaje]);
+    }
+  }, [mensaje]);
+
   return (
     <div className="mensaje-container">
-      
-      <Mensaje mensaje={mensajesIniciales} key={mensajesIniciales.id}/>
+      {mensajesIniciales.map((msj, index) => (
+        <Mensaje mensaje={msj} key={`${contactoID}.${msj.id}.${index}`} />
+      ))}
     </div>
   );
 }
 
-export default Chat;
+export default ListaMensajes;

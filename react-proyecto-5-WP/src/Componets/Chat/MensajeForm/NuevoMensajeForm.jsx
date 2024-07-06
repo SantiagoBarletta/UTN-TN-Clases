@@ -14,11 +14,7 @@ function NuevoMensajeForm({ handleSubmitNuevoMsj }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="input-container">
-      <input 
-          type="text" 
-          placeholder="Mensaje" 
-          value={mensaje} 
-          onChange={(e) => setMensaje(e.target.value)} 
+      <input type="text" placeholder="Mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)} 
         />
         <button type="submit"><SendFill /></button>
       </div>
