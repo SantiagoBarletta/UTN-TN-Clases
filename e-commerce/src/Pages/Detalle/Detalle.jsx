@@ -1,10 +1,11 @@
 // Detalle.jsx
 import React from 'react';
-import productos from '../../assets/productos.json'; 
+import productos from '../../../public/productos.json'; 
 import { useParams } from 'react-router-dom';
 
 const Detalle = () => {
   const { productId } = useParams(); 
+  console.log (productId);
   const producto = productos.find(prod => prod.id === parseInt(productId));
 
   return (

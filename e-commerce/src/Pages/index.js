@@ -7,5 +7,5 @@ export {
     Home,
     Detalle,
     Contacto,
-    Carrito
+    Carrito,
 }

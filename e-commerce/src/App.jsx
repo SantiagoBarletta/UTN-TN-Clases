@@ -13,6 +13,7 @@ function App() {
         <Route path="/Contacto" element={<Contacto/>} />
         <Route path="/Detalle" element={<Detalle/>} />
         <Route path="/detalle/:productId" element={<Detalle/>} />
+
       </Routes>
       </>
   )
