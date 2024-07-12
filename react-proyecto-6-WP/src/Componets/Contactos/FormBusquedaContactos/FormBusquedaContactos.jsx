@@ -1,9 +1,8 @@
 import React  from 'react';
 import './FormBusquedaContactos.css';
-import { ArrowLeft } from 'react-bootstrap-icons';
+
 function FormBusquedaContactos({ search, onSearchChange }) {
   const handleChange = (e) => {
-    // Llama a onSearchChange para actualizar el estado en el componente padre
     if (typeof onSearchChange === 'function') {
       onSearchChange(e.target.value);
     } else {
