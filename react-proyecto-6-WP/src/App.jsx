@@ -1,6 +1,7 @@
 import React from 'react';
-import { ChatScreens, ContactScreen } from './Screens';
+import { ChatScreens, ContactScreen, InfoScreen } from './Screens';
 import { Routes, Route } from 'react-router-dom';
+
 
 
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/chat" element={<ChatScreens />} />
         <Route path="/contactos" element={<ContactScreen />} />
         <Route path="/mensajes/:contactoID" element={<ChatScreens />} />
+        <Route path="/contactoInfo/:contactoID" element={<InfoScreen />} />
       </Routes>
  
   )

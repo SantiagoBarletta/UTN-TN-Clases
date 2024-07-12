@@ -4,6 +4,7 @@
       "thumbnail": "freddy",
       "ultima_conexion": "ayer",
       "id": 1,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Freddy Krueger",
@@ -52,6 +53,7 @@
       "thumbnail": "jason",
       "ultima_conexion": "ayer",
       "id": 2,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Jason Voorhees",
@@ -92,6 +94,7 @@
       "thumbnail": "chucky",
       "ultima_conexion": "hoy",
       "id": 3,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Chucky",
@@ -132,6 +135,7 @@
       "thumbnail": "pennywise",
       "ultima_conexion": "hoy",
       "id": 4,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Pennywise",
@@ -172,6 +176,7 @@
       "thumbnail": "michael",
       "ultima_conexion": "ayer",
       "id": 5,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Michael Myers",
@@ -212,6 +217,7 @@
       "thumbnail": "leatherface",
       "ultima_conexion": "hoy",
       "id": 6,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Leatherface",
@@ -252,6 +258,7 @@
       "thumbnail": "jigsaw",
       "ultima_conexion": "hoy",
       "id": 7,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Jigsaw",
@@ -276,6 +283,7 @@
       "thumbnail": "ghostface",
       "ultima_conexion": "hoy",
       "id": 8,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Ghostface",
@@ -316,6 +324,7 @@
       "thumbnail": "samara",
       "ultima_conexion": "ayer",
       "id": 9,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Samara",
@@ -332,6 +341,7 @@
       "thumbnail": "regan",
       "ultima_conexion": "hoy",
       "id": 10,
+      "nro": "555-555-5555",
       "mensajes": [
           {
               "autor": "Regan MacNeil",

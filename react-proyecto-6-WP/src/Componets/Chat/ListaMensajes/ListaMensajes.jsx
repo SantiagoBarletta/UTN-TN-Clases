@@ -7,7 +7,7 @@ import './Listamensajes.css';
 function ListaMensajes({ mensaje }) {
   const { contactoID } = useParams();
   const [mensajesIniciales, setMensajesIniciales] = useState([]);
-  const [contacto, setContacto] = useState(null);
+  const [contacto, setContacto] = useState();
 
   // Carga mensajes almacenados en el JSON
   useEffect(() => {
@@ -20,7 +20,6 @@ function ListaMensajes({ mensaje }) {
           setMensajesIniciales(contactoEncontrado.mensajes);
         }
       })
-      .catch(error => console.error('Error al cargar mensajes:', error));
   }, [contactoID]);
 
   // Agrega el mensaje nuevo
@@ -32,7 +31,7 @@ function ListaMensajes({ mensaje }) {
 
   return (
     <div className="mensaje-container">
-      {contacto && mensajesIniciales.map((msj, index) => (
+      {mensajesIniciales.map((msj, index) => (
         <Mensaje mensaje={msj} key={`${contactoID}.${msj.id}.${index}`} contacto={contacto} />
       ))}
     </div>

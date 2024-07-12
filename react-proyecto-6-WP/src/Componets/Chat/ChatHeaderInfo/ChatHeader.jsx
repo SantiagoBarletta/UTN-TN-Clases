@@ -6,8 +6,8 @@ import { imagenes } from "../../../Imagenes";
 import obtenerContactos from '../../../Fetching/contactos.fetching'; 
 
 function ChatHeader() {
-  const { contactoID } = useParams();
-  const [contacto, setContacto] = useState(null);
+  const { contactoID } = useParams([]);
+  const [contacto, setContacto] = useState([]);
 
   useEffect(() => {
     obtenerContactos()
@@ -17,27 +17,22 @@ function ChatHeader() {
           setContacto(contactoEncontrado);
         }
       })
-      .catch(error => console.error('Error al cargar contactos:', error));
   }, [contactoID]);
-
-  if (!contacto) {
-    return <div>Loading...</div>;
-  }
 
   const imgSrc = imagenes[contacto.thumbnail];
 
   return (
     <div className="chat-header">
-      <div className="contacto">
-        <Link to="/contactos">
+      <Link to="/contactos">
           <ArrowLeft className="arrow" />
         </Link>
+      <Link to={`/contactoInfo/${contacto.id}`} className="contacto">
         <img src={imgSrc} alt={contacto.nombre} />
         <div className="contact-info">
           <div className="contact-name">{contacto.nombre}</div>
           <div className="contact-status">Online</div>
         </div>
-      </div>
+      </Link>
       <div className="iconos">
         <CameraVideoFill />
         <TelephoneFill />

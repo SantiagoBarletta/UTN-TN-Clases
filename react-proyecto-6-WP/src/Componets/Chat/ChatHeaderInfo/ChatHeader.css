@@ -3,7 +3,7 @@
     align-items: center;
     background-color: #075e54;
     color: white;
-    padding: 15px;
+    padding: 20px;
     width: 100%;
     justify-content: space-between; 
 }
@@ -44,10 +44,14 @@
 .contacto{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #e5ddd5;
+    position: absolute ;
+    margin-left: 30px;
 }
 
 .arrow {
-    margin-right: 10px; 
+    margin-right: 0px; 
     font-size: 20px;
     color: #e5ddd5;
     font-weight: 900;
