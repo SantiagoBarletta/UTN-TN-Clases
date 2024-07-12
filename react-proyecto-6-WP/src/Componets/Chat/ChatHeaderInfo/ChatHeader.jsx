@@ -6,8 +6,9 @@ import { imagenes } from "../../../Imagenes";
 import obtenerContactos from '../../../Fetching/contactos.fetching'; 
 
 function ChatHeader() {
-  const { contactoID } = useParams([]);
-  const [contacto, setContacto] = useState([]);
+  const { contactoID } = useParams();
+  const [contacto, setContacto] = useState({});
+  const [menuVisible, setMenuVisible] = useState(false);
 
   useEffect(() => {
     obtenerContactos()
@@ -16,16 +17,20 @@ function ChatHeader() {
         if (contactoEncontrado) {
           setContacto(contactoEncontrado);
         }
-      })
+      });
   }, [contactoID]);
 
   const imgSrc = imagenes[contacto.thumbnail];
 
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <div className="chat-header">
       <Link to="/contactos">
-          <ArrowLeft className="arrow" />
-        </Link>
+        <ArrowLeft className="arrow" />
+      </Link>
       <Link to={`/contactoInfo/${contacto.id}`} className="contacto">
         <img src={imgSrc} alt={contacto.nombre} />
         <div className="contact-info">
@@ -36,7 +41,16 @@ function ChatHeader() {
       <div className="iconos">
         <CameraVideoFill />
         <TelephoneFill />
-        <ThreeDotsVertical />
+        <ThreeDotsVertical onClick={toggleMenu} />
+        {menuVisible && (
+          <div className="context-menu">
+            <div className="menu-item">Opción 1</div>
+            <div className="menu-item">Opción 2</div>
+            <div className="menu-item">Opción 3</div>
+            <div className="menu-item">Opción 4</div>
+            <div className="menu-item">Opción 5</div>
+          </div>
+        )}
       </div>
     </div>
   );
