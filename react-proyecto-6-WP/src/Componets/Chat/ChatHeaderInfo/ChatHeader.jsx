@@ -4,11 +4,13 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, CameraVideoFill, TelephoneFill, ThreeDotsVertical } from 'react-bootstrap-icons';
 import { imagenes } from "../../../Imagenes";
 import obtenerContactos from '../../../Fetching/contactos.fetching'; 
+import FormBusquedaMensajes from "../FormBusquedamensajes/FormBusquedaMensajes";
 
-function ChatHeader() {
+function ChatHeader({ search, onSearchChange }) {
   const { contactoID } = useParams();
   const [contacto, setContacto] = useState({});
   const [menuVisible, setMenuVisible] = useState(false);
+  const [searchVisible, setSearchVisible] = useState(false);
 
   useEffect(() => {
     obtenerContactos()
@@ -26,8 +28,18 @@ function ChatHeader() {
     setMenuVisible(!menuVisible);
   };
 
+  const handleSearchClick = () => {
+    setSearchVisible(!searchVisible);  
+  };
+
   return (
-    <div className="chat-header">
+    <div className={`chat-header ${searchVisible ? 'search-visible' : ''}`}>
+       {searchVisible && (
+        <FormBusquedaMensajes
+          search={search}
+          onSearchChange={onSearchChange}
+        />
+      )}
       <Link to="/contactos">
         <ArrowLeft className="arrow" />
       </Link>
@@ -39,16 +51,16 @@ function ChatHeader() {
         </div>
       </Link>
       <div className="iconos">
-        <CameraVideoFill />
-        <TelephoneFill />
+        <CameraVideoFill className="icono"/>
+        <TelephoneFill className="icono"/>
         <ThreeDotsVertical onClick={toggleMenu} />
         {menuVisible && (
           <div className="context-menu">
-            <div className="menu-item">Opción 1</div>
-            <div className="menu-item">Opción 2</div>
-            <div className="menu-item">Opción 3</div>
-            <div className="menu-item">Opción 4</div>
-            <div className="menu-item">Opción 5</div>
+            <Link to={`/contactoInfo/${contacto.id}`} className="link"><div className="menu-item">Ver Contacto</div></Link>
+            <Link onClick={() => { handleSearchClick(); toggleMenu(); }} className="link"><div className="menu-item">Buscar</div></Link>
+            <Link to='#' className="link"><div className="menu-item">Silenciar</div></Link>
+            <Link to='#'  className="link"><div className="menu-item">Mensajes temporales</div></Link>
+            <Link to='#' className="link"><div className="menu-item">Más opciones</div></Link>
           </div>
         )}
       </div>

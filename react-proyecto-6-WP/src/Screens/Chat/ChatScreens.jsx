@@ -17,11 +17,16 @@ function ChatScreens({ contactoID }) {
     setMensajes([...mensajes, nuevoMensaje]);
   };
 
+  const [search, setSearch] = useState('');
+
+  const handleSearchChange = (value) => {
+    setSearch(value);
+  }
   return (
     <div className="chat-screens">
-      <ChatHeader />
-      <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]} />
-      <NuevoMensajeForm handleSubmitNuevoMsj={handleNuevoMsj} />
+      <ChatHeader  search={search} onSearchChange={handleSearchChange}  />
+      <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]} search={search} />
+      <NuevoMensajeForm handleSubmitNuevoMsj={handleNuevoMsj}  />
     </div>
   );
 }
