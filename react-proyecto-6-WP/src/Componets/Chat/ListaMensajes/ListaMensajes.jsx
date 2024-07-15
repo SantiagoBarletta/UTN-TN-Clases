@@ -34,12 +34,12 @@ function ListaMensajes({ mensaje, search }) {
   const resaltarBusqueda = (texto, busqueda) => {
     if (!busqueda) return texto;
 
-    const partes = texto.split(new RegExp(`(${busqueda})`, 'gi'));
-    return partes.map((parte, index) =>
-      parte.toLowerCase() === busqueda.toLowerCase() ? (
-        <span key={index} style={{ backgroundColor: 'yellow' }}>{parte}</span>
+    const letras = texto.split(new RegExp(`(${busqueda})`, 'gi'));
+    return letras.map((letra, index) =>
+      letra.toLowerCase() === busqueda.toLowerCase() ? (
+        <span key={index} style={{ backgroundColor: 'yellow' }}>{letra}</span>
       ) : (
-        parte
+        letra
       )
     );
   };
