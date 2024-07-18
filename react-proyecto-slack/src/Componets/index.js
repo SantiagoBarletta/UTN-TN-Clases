@@ -1,5 +1,5 @@
 
-import ContactosHeader from "./Workspaces/ContactosHeader/ContactosHeader"
+import WorkspaceHeader from "./Workspaces/WorkspacesHeader/WorkspacesHeader"
 import ContactosFooter from "./Workspaces/ContactosFooter/ContactosFooter"
 import Workspace from "./Workspaces/Workspace/Workspace"
 
@@ -9,6 +9,6 @@ import WorkspacesList from "./Workspaces/WorkspacesList/WorkspacesList"
 
 
 
-export {  Workspace, WorkspacesList, ContactosHeader, ContactosFooter }
+export {  Workspace, WorkspacesList, WorkspaceHeader, ContactosFooter }
 
 

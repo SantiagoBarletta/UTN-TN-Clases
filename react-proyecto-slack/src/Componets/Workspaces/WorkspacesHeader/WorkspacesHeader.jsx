@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { CiCamera } from 'react-icons/ci';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { IoMdSearch } from 'react-icons/io';
-import './ContactosHeader.css';
+import './WorkspacesHeader.css';
 import FormBusquedaContactos from '../FormBusquedaContactos/FormBusquedaContactos';
 
-const ContactosHeader = ({ search, onSearchChange }) => {
+const WorkspacesHeader = ({ search, onSearchChange }) => {
   const [searchVisible, setSearchVisible] = useState(false);
 
   const handleSearchClick = () => {
@@ -30,4 +30,4 @@ const ContactosHeader = ({ search, onSearchChange }) => {
   );
 };
 
-export default ContactosHeader;
+export default WorkspacesHeader;

@@ -21,6 +21,14 @@
             "lastname": "Johnson",
             "email": "bob@marketing.com",
             "profile_image": "https://example.com/profiles/bob.jpg"
+          },
+          {
+            "id": "U003",
+            "username": "alice123",
+            "firstname": "Alice",
+            "lastname": "Smith",
+            "email": "alice@marketing.com",
+            "profile_image": "https://example.com/profiles/alice.jpg"
           }
         ],
         "channels": [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './WorkspacesScreen.css';
-import { ContactosHeader, WorkspacesList, ContactosFooter  } from '../../Componets';
+import { WorkspacesHeader, WorkspacesList, ContactosFooter  } from '../../Componets';
 
 
 function WorkspacesScreen() {
@@ -11,7 +11,7 @@ function WorkspacesScreen() {
     }
     return (
         <div className="contact-screens">
-            <ContactosHeader search={search} onSearchChange={handleSearchChange} />
+            <WorkspacesHeader />
             <WorkspacesList />
             <ContactosFooter />
       </div>
