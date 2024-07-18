@@ -1,0 +1,49 @@
+.workspace-item{
+    display: flex;
+    border-bottom: 1px solid #e5ddd5;
+}
+
+.workspace-item img {
+    height: 44px;
+    width: 44px;
+    min-width: 44px;
+    border-radius: 10%;
+    line-height: 44px;
+    white-space: nowrap;
+}
+.workspace-item .datos {
+    flex: 1;
+    overflow: hidden;
+    
+}
+.workspace-item .nombre {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.workspace-item .preview {
+    font-size: 14px;
+    color: #e5ddd5;
+    margin-top: 0;
+    align-items: center;
+    display: flex;
+}
+
+.workspace-item .hora {
+    margin-right: 8px;
+    font-size: 12px;
+    color: #e5ddd5;
+}
+
+.workspace-item .estado {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.2rem;
+}
+
+.workspaces-link {
+    color: inherit;
+    padding: 15px 24px 20px;
+    display: block;
+    text-decoration: none;
+    
+}

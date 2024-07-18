@@ -1,0 +1,182 @@
+{
+    "workspaces": [
+      {
+        "id": "W001",
+        "name": "Team Asesinos seriales",
+        "creation_date": "2023-01-15T12:00:00Z",
+        "image": "/Imagenes/ghostface.jpg",
+        "users": [
+          {
+            "id": "U001",
+            "username": "alice123",
+            "firstname": "Alice",
+            "lastname": "Smith",
+            "email": "alice@marketing.com",
+            "profile_image": "https://example.com/profiles/alice.jpg"
+          },
+          {
+            "id": "U002",
+            "username": "bob456",
+            "firstname": "Bob",
+            "lastname": "Johnson",
+            "email": "bob@marketing.com",
+            "profile_image": "https://example.com/profiles/bob.jpg"
+          }
+        ],
+        "channels": [
+          {
+            "id": "C001",
+            "name": "general",
+            "messages": [
+              {
+                "id": "M001",
+                "author": "Alice Smith",
+                "author_image": "https://example.com/profiles/alice.jpg",
+                "date": "2024-07-17T10:00:00Z",
+                "text": "Hola equipo, ¿cómo están?"
+              },
+              {
+                "id": "M002",
+                "author": "Bob Johnson",
+                "author_image": "https://example.com/profiles/bob.jpg",
+                "date": "2024-07-17T10:05:00Z",
+                "text": "Todo bien, ¿y tú?"
+              }
+            ]
+          },
+          {
+            "id": "C002",
+            "name": "announcements",
+            "messages": [
+              {
+                "id": "M003",
+                "author": "Alice Smith",
+                "author_image": "https://example.com/profiles/alice.jpg",
+                "date": "2024-07-17T09:00:00Z",
+                "text": "Tenemos una reunión a las 3 PM."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "W002",
+        "name": "Team Demonios",
+        "creation_date": "2022-11-20T09:30:00Z",
+        "image": "/Imagenes/regan.jpg",
+        "users": [
+          {
+            "id": "U003",
+            "username": "charlie789",
+            "firstname": "Charlie",
+            "lastname": "Brown",
+            "email": "charlie@dev.com",
+            "profile_image": "https://example.com/profiles/charlie.jpg"
+          },
+          {
+            "id": "U004",
+            "username": "david012",
+            "firstname": "David",
+            "lastname": "Williams",
+            "email": "david@dev.com",
+            "profile_image": "https://example.com/profiles/david.jpg"
+          }
+        ],
+        "channels": [
+          {
+            "id": "C003",
+            "name": "general",
+            "messages": [
+              {
+                "id": "M004",
+                "author": "Charlie Brown",
+                "author_image": "https://example.com/profiles/charlie.jpg",
+                "date": "2024-07-17T08:00:00Z",
+                "text": "Buenos días, equipo."
+              },
+              {
+                "id": "M005",
+                "author": "David Williams",
+                "author_image": "https://example.com/profiles/david.jpg",
+                "date": "2024-07-17T08:15:00Z",
+                "text": "Buenos días, ¿alguna actualización del proyecto?"
+              }
+            ]
+          },
+          {
+            "id": "C004",
+            "name": "bugs",
+            "messages": [
+              {
+                "id": "M006",
+                "author": "David Williams",
+                "author_image": "https://example.com/profiles/david.jpg",
+                "date": "2024-07-17T11:00:00Z",
+                "text": "Encontré un bug en la última versión."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "W003",
+        "name": "Team Sobrenaturales",
+        "creation_date": "2021-06-10T15:45:00Z",
+        "image": "/Imagenes/samara.jpg",
+        "users": [
+          {
+            "id": "U005",
+            "username": "eve345",
+            "firstname": "Eve",
+            "lastname": "Davis",
+            "email": "eve@design.com",
+            "profile_image": "https://example.com/profiles/eve.jpg"
+          },
+          {
+            "id": "U006",
+            "username": "frank678",
+            "firstname": "Frank",
+            "lastname": "Miller",
+            "email": "frank@design.com",
+            "profile_image": "https://example.com/profiles/frank.jpg"
+          }
+        ],
+        "channels": [
+          {
+            "id": "C005",
+            "name": "general",
+            "messages": [
+              {
+                "id": "M007",
+                "author": "Eve Davis",
+                "author_image": "https://example.com/profiles/eve.jpg",
+                "date": "2024-07-17T09:30:00Z",
+                "text": "Hola, equipo de diseño."
+              },
+              {
+                "id": "M008",
+                "author": "Frank Miller",
+                "author_image": "https://example.com/profiles/frank.jpg",
+                "date": "2024-07-17T09:35:00Z",
+                "text": "Hola, ¿alguna novedad?"
+              }
+            ]
+          },
+          {
+            "id": "C006",
+            "name": "feedback",
+            "messages": [
+              {
+                "id": "M009",
+                "author": "Eve Davis",
+                "author_image": "https://example.com/profiles/eve.jpg",
+                "date": "2024-07-17T10:45:00Z",
+                "text": "Necesito feedback sobre el nuevo logo."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
