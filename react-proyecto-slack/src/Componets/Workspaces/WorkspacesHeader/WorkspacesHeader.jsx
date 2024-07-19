@@ -1,32 +1,15 @@
 import React, { useState } from 'react';
-import { CiCamera } from 'react-icons/ci';
-import { BsThreeDotsVertical } from 'react-icons/bs';
-import { IoMdSearch } from 'react-icons/io';
 import './WorkspacesHeader.css';
-import FormBusquedaContactos from '../FormBusquedaContactos/FormBusquedaContactos';
 
-const WorkspacesHeader = ({ search, onSearchChange }) => {
-  const [searchVisible, setSearchVisible] = useState(false);
-
-  const handleSearchClick = () => {
-    setSearchVisible(!searchVisible);  
-  };
-
+const WorkspacesHeader = () => {
   return (
-    <div className={`contact-header ${searchVisible ? 'search-visible' : ''}`}>
-      {searchVisible && (
-        <FormBusquedaContactos
-          search={search}
-          onSearchChange={onSearchChange}
-        />
-      )}
-      <div className='logo'>WhatsApp</div>
-      <div className='iconos'>
-        <CiCamera />
-        <IoMdSearch onClick={handleSearchClick} />  
-        <BsThreeDotsVertical />
-      </div>
+    <div className="workspaces-header">
+      
+      <div className='logo'><img src='Imagenes/slack.png' alt="logo" /></div>
+      <h2>¡Hola denuevo! <span>¡Mantén tu machete afilado!</span></h2>
+      <p className="select">Elige uno de los siguientes espacios de trabajo para volver a trabajar con tu equipo.</p>
     </div>
+    
   );
 };
 

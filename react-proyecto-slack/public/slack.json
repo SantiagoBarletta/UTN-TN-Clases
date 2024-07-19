@@ -8,27 +8,43 @@
         "users": [
           {
             "id": "U001",
-            "username": "alice123",
-            "firstname": "Alice",
+            "username": "ghostface789",
+            "firstname": "Ghostface",
             "lastname": "Smith",
-            "email": "alice@marketing.com",
-            "profile_image": "https://example.com/profiles/alice.jpg"
+            "email": "ghostface@slashers.com",
+            "profile_image": "/Imagenes/ghostface.jpg"
           },
           {
             "id": "U002",
-            "username": "bob456",
-            "firstname": "Bob",
-            "lastname": "Johnson",
-            "email": "bob@marketing.com",
-            "profile_image": "https://example.com/profiles/bob.jpg"
+            "username": "jigsaw456",
+            "firstname": "John",
+            "lastname": "Kramer",
+            "email": "jigsaw@slashers.com",
+            "profile_image": "/Imagenes/jigsaw.jpg"
           },
           {
             "id": "U003",
-            "username": "alice123",
-            "firstname": "Alice",
-            "lastname": "Smith",
-            "email": "alice@marketing.com",
-            "profile_image": "https://example.com/profiles/alice.jpg"
+            "username": "leatherface123",
+            "firstname": "Jedediah",
+            "lastname": "Sawyer",
+            "email": "leaderface@slashers.com",
+            "profile_image": "/Imagenes/leatherface.jpg"
+          },
+          {
+            "id": "U004",
+            "username": "chucky789",
+            "firstname": "Charles Lee",
+            "lastname": "Ray",
+            "email": "chucky@slashers.com",
+            "profile_image": "/Imagenes/chucky.jpg"
+          },
+          {
+            "id": "U005",
+            "username": "michael456",
+            "firstname": "Michael",
+            "lastname": "Myers",
+            "email": "michael@slashers.com",
+            "profile_image": "/Imagenes/michael.png"
           }
         ],
         "channels": [
@@ -74,20 +90,28 @@
         "image": "/Imagenes/regan.jpg",
         "users": [
           {
-            "id": "U003",
-            "username": "charlie789",
-            "firstname": "Charlie",
-            "lastname": "Brown",
-            "email": "charlie@dev.com",
-            "profile_image": "https://example.com/profiles/charlie.jpg"
+            "id": "U006",
+            "username": "regan789",
+            "firstname": "Regan",
+            "lastname": "MacNeil",
+            "email": "regan@slashers.com",
+            "profile_image": "/Imagenes/regan.jpg"
           },
           {
-            "id": "U004",
-            "username": "david012",
-            "firstname": "David",
-            "lastname": "Williams",
-            "email": "david@dev.com",
-            "profile_image": "https://example.com/profiles/david.jpg"
+            "id": "U007",
+            "username": "penny456",
+            "firstname": "Pennywise",
+            "lastname": "Clown",
+            "email": "it@slashers.com",
+            "profile_image": "/Imagenes/pennywise.jpg"
+          },
+          {
+            "id": "U008",
+            "username": "fred123",
+            "firstname": "Freddy",
+            "lastname": "Krueger",
+            "email": "pesadilla@slashers.com",
+            "profile_image": "/Imagenes/freddy.jpg"
           }
         ],
         "channels": [
@@ -133,20 +157,20 @@
         "image": "/Imagenes/samara.jpg",
         "users": [
           {
-            "id": "U005",
-            "username": "eve345",
-            "firstname": "Eve",
-            "lastname": "Davis",
-            "email": "eve@design.com",
-            "profile_image": "https://example.com/profiles/eve.jpg"
+            "id": "U009",
+            "username": "samara123",
+            "firstname": "Samara",
+            "lastname": "Morgan",
+            "email": "samara@slashers.com",
+            "profile_image": "/Imagenes/samara.jpg"
           },
           {
-            "id": "U006",
-            "username": "frank678",
-            "firstname": "Frank",
-            "lastname": "Miller",
-            "email": "frank@design.com",
-            "profile_image": "https://example.com/profiles/frank.jpg"
+            "id": "U010",
+            "username": "gasper",
+            "firstname": "Gasparin",
+            "lastname": "El fantasma",
+            "email": "gasper@slashers.com",
+            "profile_image": "/Imagenes/gasper.jpg"
           }
         ],
         "channels": [

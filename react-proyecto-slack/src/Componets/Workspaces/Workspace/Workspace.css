@@ -1,14 +1,12 @@
 .workspace-item{
     display: flex;
-    border-bottom: 1px solid #e5ddd5;
     justify-content: space-between;
     margin: 0;
 }
 
 .workspace-item img {
-    height: 44px;
-    width: 44px;
-    min-width: 44px;
+    height: 50px;
+    width: 50px;
     border-radius: 10%;
     line-height: 44px;
     white-space: nowrap;
@@ -16,15 +14,15 @@
 .workspace-item .datos {
     display: flex;
     flex-direction: column;
-    margin: 0 10px ;    
+    margin: 0 10px ;
+    padding: 5px;
 }
 
 .workspace-item .datos .name {
     text-overflow: ellipsis;
     height: 27px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 27px;
     overflow: hidden;
     margin: 0;
 }
@@ -39,6 +37,7 @@
 .workspace-item .flecha {
     font-size: 18px;
     margin-left: auto;
+    margin-right: 30px;
     display: flex;
     align-items: center;
     
@@ -52,9 +51,21 @@
 
 .workspaces-link {
     color: inherit;
-    padding: 15px 24px 5px;
+    padding: 5px 24px 5px;
+    margin: 10px 0;
     display: block;
     text-decoration: none;
-    
+    border-bottom: 1px solid #e5ddd5;
 }
 
+.workspaces-link:last-child {
+    border-bottom: none;
+}
+
+.workspace-item .members img  {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    border-radius: 3px;
+    
+}
