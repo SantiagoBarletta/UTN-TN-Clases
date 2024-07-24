@@ -6,38 +6,46 @@ import { Link } from "react-router-dom";
 
 function WorkspacesList() {
   const [workspaces, setWorkspaces] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    obtenerWorkspaces()
-      .then((data) => {
-        console.log("workspaces", data);
-        // Verificar si la propiedad workspaces es un arreglo
-        if (data && Array.isArray(data.workspaces)) {
-          setWorkspaces(data.workspaces);
-        } else {
-          console.error("Datos no son un arreglo:", data);
-          setWorkspaces([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error al obtener workspaces:", error);
-        setWorkspaces([]); // Manejar el error asignando un arreglo vacío
-      });
+    const storedWorkspaces = localStorage.getItem('workspaces');
+    if (storedWorkspaces) {
+      setWorkspaces(JSON.parse(storedWorkspaces));
+      console.log("workspaces desde localStorage", JSON.parse(storedWorkspaces));
+    } else {
+      obtenerWorkspaces()
+        .then((data) => {
+          console.log("workspaces desde fetch", data);
+          if (data && Array.isArray(data.workspaces)) {
+            setWorkspaces(data.workspaces);
+            localStorage.setItem('workspaces', JSON.stringify(data.workspaces));
+          }
+        })
+    }
   }, []);
 
   return (
     <>
       <div className="workspace-list">
         <div className="title"><h4>Espacios de trabajo</h4></div>
-        {workspaces.length > 0 ? (
-          workspaces.map((workspace) => (
-            <Workspace key={workspace.id} workspace={workspace} />
-          ))
+        {error ? (
+          <p className="error">{error}</p>
         ) : (
-          <p>No hay workspaces disponibles.</p>
+          workspaces.length > 0 ? (
+            workspaces.map((workspace) => (
+              <Workspace key={workspace.id} workspace={workspace} />
+            ))
+          ) : (
+            <p>No hay workspaces disponibles.</p>
+          )
         )}
       </div>
-      <div className="workspaces-add"><img src="Imagenes/jasonicon.png" alt="logo" /> <p>¿Quieres usar Slasher con otro equipo?</p> <Link to="#"><button>Crear otro espacio de trabajo</button></Link></div>
+      <div className="workspaces-add">
+        <img src="Imagenes/jasonicon.png" alt="logo" />
+        <p>¿Quieres usar Slasher con otro equipo?</p>
+        <Link to="/workspaces/new"><button>Crear otro espacio de trabajo</button></Link>
+      </div>
     </>
   );
 }

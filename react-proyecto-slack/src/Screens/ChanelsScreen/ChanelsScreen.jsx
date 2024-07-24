@@ -1,34 +1,19 @@
 import React, { useState } from "react";
-
+import { ChanelsHeader, Chanels, ChanelsAside } from "../../Componets";
 import "./ChanelsScreen.css";
 
-function ChanelsScreens({ contactoID }) {
-  const [mensajes, setMensajes] = useState([]);
+function ChanelsScreens({ }) {
 
-  const handleNuevoMsj = (nuevoMsj) => {
-    const nuevoMensaje = {
-      id: mensajes.length + 1,
-      texto: nuevoMsj,
-      autor: "yo",
-      estado: "entregado",
-      dia: "hoy",
-      hora: new Date().toLocaleTimeString(),
-    };
-    setMensajes([...mensajes, nuevoMensaje]);
-  };
 
-  const [search, setSearch] = useState('');
-
-  const handleSearchChange = (value) => {
-    setSearch(value);
-  }
   return (
-    <div className="chat-screens">
-      <ChatHeader  search={search} onSearchChange={handleSearchChange}  />
-      <ListaMensajes contactoID={contactoID} mensaje={mensajes[mensajes.length - 1]} search={search} />
-      <NuevoMensajeForm handleSubmitNuevoMsj={handleNuevoMsj}  />
+    <div className="chanels-screens">
+      <ChanelsHeader />
+      <main className="chanels-main">
+        <ChanelsAside />
+        <Chanels />
+      </main>
+
     </div>
   );
 }
-
 export default ChanelsScreens;

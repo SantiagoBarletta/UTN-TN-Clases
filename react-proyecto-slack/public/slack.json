@@ -54,8 +54,8 @@
             "messages": [
               {
                 "id": "M001",
-                "author": "Alice Smith",
-                "author_image": "https://example.com/profiles/alice.jpg",
+                "author": "Ghostface",
+                "author_image": "/Imagenes/ghostface.jpg",
                 "date": "2024-07-17T10:00:00Z",
                 "text": "Hola equipo, ¿cómo están?"
               },
@@ -74,8 +74,8 @@
             "messages": [
               {
                 "id": "M003",
-                "author": "Alice Smith",
-                "author_image": "https://example.com/profiles/alice.jpg",
+                "author": "Ghostface",
+                "author_image": "/Imagenes/ghostface.jpg",
                 "date": "2024-07-17T09:00:00Z",
                 "text": "Tenemos una reunión a las 3 PM."
               }

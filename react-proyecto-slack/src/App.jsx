@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChanelsScreen,  InfoScreen, WorkspacesScreen } from './Screens';
+import { ChanelsScreen,  NewWorkspaceScreen, WorkspacesScreen } from './Screens';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -10,10 +10,8 @@ function App() {
  
       <Routes>
         <Route path="/" element={<WorkspacesScreen />} />
-         <Route path="/workspaces/:workspaceID" element={<ChanelsScreen />} />
-        {/*<Route path="/contactos" element={<ContactScreen />} />
-        <Route path="/mensajes/:contactoID" element={<ChatScreens />} />
-        <Route path="/contactoInfo/:contactoID" element={<InfoScreen />} /> */}
+        <Route path="/workspaces/:workspaceID/:channelID" element={<ChanelsScreen />} />
+        <Route path="/workspaces/new" element={<NewWorkspaceScreen />} />
       </Routes>
  
   )
