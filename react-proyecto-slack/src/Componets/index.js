@@ -8,10 +8,11 @@ import WorkspacesList from "./Workspaces/WorkspacesList/WorkspacesList"
 import Chanels from "./Chanels/Chanels/Chanels"
 import ChanelsAside from "./Chanels/ChanelsAside/ChanelsAside"
 import ChanelsHeader from "./Chanels/ChanelsHeader/ChanelsHeader"
+import NuevoMensajeForm from "./Chanels/MensajeForm/NuevoMensajeForm"
 
 
 
 
-export {  Workspace, WorkspacesList, WorkspacesHeader, WorkspacesFooter, NewWorkspace, NewWorkspaceHeader, Chanels, ChanelsAside, ChanelsHeader }
+export {  Workspace, WorkspacesList, WorkspacesHeader, WorkspacesFooter, NewWorkspace, NewWorkspaceHeader, Chanels, ChanelsAside, ChanelsHeader, NuevoMensajeForm }
 
 

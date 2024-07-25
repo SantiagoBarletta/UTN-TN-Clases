@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './ChanelsHeader.css'
 import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 import { LuClock3 } from "react-icons/lu";
@@ -8,7 +9,7 @@ const ChanelsHeader = () => {
   return (
     <div> 
       <div className='chanels-header'>
-        <div className='logo'><img src='../../Imagenes/slack.png' alt="logo" /></div>
+        <div className='logo'><Link to="/"><img src='../../Imagenes/slack2.png' alt="logo" /></Link></div>
         <div className='iconos'><FaArrowLeft /><FaArrowRight /><LuClock3 /></div>
         <input type="text" placeholder='Buscar' />
         <div className='ayuda'><IoMdHelpCircleOutline /></div>

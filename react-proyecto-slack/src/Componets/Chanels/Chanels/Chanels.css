@@ -1,3 +1,84 @@
 .channel{
-    background-color: #1A1D21
+    background-color: #1A1D21;
+    border: 1px solid #6D4E72;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.channel .messages-header  {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    border-bottom: 1px solid #6D4E72;
+    padding: 20px;
+}
+.channel .messages {
+    flex: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.channel .messages .message {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #6D4E72;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.channel .messages .message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.channel .messages .message .message-content {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.channel .messages .message .message-content .message-text {
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.channel .messages .no-messages {
+    color: #ccc;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #6D4E72;
+    gap: 20px;
+    justify-content: center;
+}
+
+.channel .messages .message .message-content .message-date {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 20px;
+}
+
+
+.channel .messages .message .delete-button {
+    background-color: #1A1D21;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 60px;
 }

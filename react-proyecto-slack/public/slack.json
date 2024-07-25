@@ -61,23 +61,52 @@
               },
               {
                 "id": "M002",
-                "author": "Bob Johnson",
-                "author_image": "https://example.com/profiles/bob.jpg",
+                "author": "Michael Myers",
+                "author_image": "/Imagenes/michael.png",
                 "date": "2024-07-17T10:05:00Z",
-                "text": "Todo bien, ¿y tú?"
-              }
-            ]
-          },
-          {
-            "id": "C002",
-            "name": "announcements",
-            "messages": [
+                "text": "Todo bien, ¿vos?"
+              },
               {
                 "id": "M003",
                 "author": "Ghostface",
                 "author_image": "/Imagenes/ghostface.jpg",
+                "date": "2024-07-17T10:08:00Z",
+                "text": "Todo tranquilo, cual es su pelicula de terror favorita?"
+              },
+              {
+                "id": "M004",
+                "author": "Charles Lee Ray",
+                "author_image": "/Imagenes/chucky.jpg",
+                "date": "2024-07-17T10:15:00Z",
+                "text": "No empieces!"
+              },
+              {
+                "id": "M005",
+                "author": "John Kramer",
+                "author_image": "/Imagenes/jigsaw.jpg",
+                "date": "2024-07-17T10:20:00Z",
+                "text": "y si jugamos un juego?"
+              },
+              {
+                "id": "M006",
+                "author": "Jedediah Sawyer",
+                "author_image": "/Imagenes/leatherface.jpg",
+                "date": "2024-07-17T10:20:00Z",
+                "text": "🫣"
+              }
+              
+            ]
+          },
+          {
+            "id": "C002",
+            "name": "juntadas",
+            "messages": [
+              {
+                "id": "M007",
+                "author": "Ghostface",
+                "author_image": "/Imagenes/ghostface.jpg",
                 "date": "2024-07-17T09:00:00Z",
-                "text": "Tenemos una reunión a las 3 PM."
+                "text": "Tenemos una reunión a las 3 AM."
               }
             ]
           }
@@ -120,31 +149,31 @@
             "name": "general",
             "messages": [
               {
-                "id": "M004",
-                "author": "Charlie Brown",
-                "author_image": "https://example.com/profiles/charlie.jpg",
+                "id": "M008",
+                "author": "Regan MacNeil",
+                "author_image": "/Imagenes/regan.jpg",
                 "date": "2024-07-17T08:00:00Z",
-                "text": "Buenos días, equipo."
+                "text": "Mi pa zuzuzu zuzuzu."
               },
               {
-                "id": "M005",
-                "author": "David Williams",
-                "author_image": "https://example.com/profiles/david.jpg",
+                "id": "M009",
+                "author": "Pennywise",
+                "author_image": "/Imagenes/pennywise.jpg",
                 "date": "2024-07-17T08:15:00Z",
-                "text": "Buenos días, ¿alguna actualización del proyecto?"
+                "text": "Todos flotan!"
               }
             ]
           },
           {
             "id": "C004",
-            "name": "bugs",
+            "name": "posesiones",
             "messages": [
               {
-                "id": "M006",
-                "author": "David Williams",
-                "author_image": "https://example.com/profiles/david.jpg",
+                "id": "M0010",
+                "author": "Freddy Krueger",
+                "author_image": "/Imagenes/freddy.jpg",
                 "date": "2024-07-17T11:00:00Z",
-                "text": "Encontré un bug en la última versión."
+                "text": "A mimir!"
               }
             ]
           }
@@ -179,18 +208,18 @@
             "name": "general",
             "messages": [
               {
-                "id": "M007",
-                "author": "Eve Davis",
-                "author_image": "https://example.com/profiles/eve.jpg",
+                "id": "M0011",
+                "author": "Samara Morgan",
+                "author_image": "/Imagenes/samara.jpg",
                 "date": "2024-07-17T09:30:00Z",
-                "text": "Hola, equipo de diseño."
+                "text": "Siete días."
               },
               {
-                "id": "M008",
-                "author": "Frank Miller",
-                "author_image": "https://example.com/profiles/frank.jpg",
+                "id": "M0012",
+                "author": "Gasparin",
+                "author_image": "/Imagenes/gasper.jpg",
                 "date": "2024-07-17T09:35:00Z",
-                "text": "Hola, ¿alguna novedad?"
+                "text": "Creo que me equivoqué de grupo."
               }
             ]
           },
@@ -199,11 +228,18 @@
             "name": "feedback",
             "messages": [
               {
-                "id": "M009",
-                "author": "Eve Davis",
-                "author_image": "https://example.com/profiles/eve.jpg",
+                "id": "M0013",
+                "author": "Samara Morgan",
+                "author_image": "/Imagenes/samara.jpg",
                 "date": "2024-07-17T10:45:00Z",
-                "text": "Necesito feedback sobre el nuevo logo."
+                "text": "Siete días."
+              },
+              {
+                "id": "M0014",
+                "author": "Gasparin",
+                "author_image": "/Imagenes/gasper.jpg",
+                "date": "2024-07-17T09:35:00Z",
+                "text": "Ya cambia el cassette!."
               }
             ]
           }
