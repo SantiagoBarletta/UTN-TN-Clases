@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 function WorkspacesList() {
   const [workspaces, setWorkspaces] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // Estado de carga
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const storedWorkspaces = localStorage.getItem('workspaces');
     if (storedWorkspaces) {
       setWorkspaces(JSON.parse(storedWorkspaces));
       console.log("workspaces desde localStorage", JSON.parse(storedWorkspaces));
-      setIsLoading(false); 
+      setIsLoading(false);
     } else {
       obtenerWorkspaces()
         .then((data) => {
@@ -22,8 +22,13 @@ function WorkspacesList() {
           if (data && Array.isArray(data.workspaces)) {
             setWorkspaces(data.workspaces);
             localStorage.setItem('workspaces', JSON.stringify(data.workspaces));
-          }
-        })       
+            setIsLoading(false);
+          } 
+        })
+        .catch((error) => {
+          setError(error.message);
+          setIsLoading(false);
+        });
     }
   }, []);
 
@@ -31,9 +36,9 @@ function WorkspacesList() {
     <>
       <div className="workspace-list">
         <div className="title"><h4>Espacios de trabajo</h4></div>
-        {error ? (
-          <p className="error">{error}</p>
-        ) : isLoading ? ( <p>Cargando...</p>) : (
+        {isLoading ? (
+          <p>Cargando...</p>
+        ) : (
           workspaces.length > 0 ? (
             workspaces.map((workspace) => (
               <Workspace key={workspace.id} workspace={workspace} />

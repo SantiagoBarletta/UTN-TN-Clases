@@ -4,9 +4,9 @@ import './Chanels.css';
 import { IoIosArrowDown } from "react-icons/io";
 import { FaTrash } from "react-icons/fa";
 import NuevoMensajeForm from '../MensajeForm/NuevoMensajeForm';
+import UserInfo from '../../Users/UserInfo';
 
-
-const Chanels = ({ search }) => {
+const Chanels = ({ search, selectedUser }) => {
   const { workspaceID, channelID } = useParams();
   const [messages, setMessages] = useState([]);
   const [channelName, setChannelName] = useState('');
@@ -77,6 +77,7 @@ const Chanels = ({ search }) => {
 
   return (
     <div className='channel'>
+      <UserInfo user={selectedUser} workspaceID={workspaceID} channelID={channelID}/>
       <div className='messages-header'>
         <h2># {channelName} <IoIosArrowDown className='arrow' /></h2>
       </div>
@@ -101,6 +102,7 @@ const Chanels = ({ search }) => {
         )}
       </div>
       <NuevoMensajeForm onNewMessage={handleNewMessage} />
+      
     </div>
   );
 };

@@ -4,7 +4,7 @@ import "./ChanelsAside.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { TiArrowSortedDown } from "react-icons/ti";
 
-const ChanelsAside = () => {
+const ChanelsAside = ({ onSelectUser }) => {
   const { workspaceID , channelID } = useParams();
   const [workspace, setWorkspace] = useState(null);
   const [channels, setChannels] = useState([]);
@@ -16,28 +16,14 @@ const ChanelsAside = () => {
     
     if (storedWorkspaces) {
       const workspaces = JSON.parse(storedWorkspaces);
-      const foundWorkspace = workspaces.find(ws => ws.id === workspaceID);
-      if (foundWorkspace) {
-        setWorkspace(foundWorkspace);
-        setWorkspaceName(foundWorkspace.name);
-        setChannels(foundWorkspace.channels);
-        setUsers(foundWorkspace.users);
+      const workspaceEncontrado = workspaces.find(ws => ws.id === workspaceID);
+      if (workspaceEncontrado) {
+        setWorkspace(workspaceEncontrado);
+        setWorkspaceName(workspaceEncontrado.name);
+        setChannels(workspaceEncontrado.channels);
+        setUsers(workspaceEncontrado.users);
       }
-    } else {
-      obtenerWorkspaces()
-        .then((data) => {
-          if (data && Array.isArray(data.workspaces)) {
-            localStorage.setItem('workspaces', JSON.stringify(data.workspaces));
-            const foundWorkspace = data.workspaces.find(ws => ws.id === workspaceID);
-            if (foundWorkspace) {
-              setWorkspace(foundWorkspace);
-              setWorkspaceName(foundWorkspace.name);
-              setChannels(foundWorkspace.channels);
-              setUsers(foundWorkspace.users);
-            }
-          }
-        })
-    }
+    } 
   }, [workspaceID]);
 
   return (
@@ -57,7 +43,10 @@ const ChanelsAside = () => {
         {users.length > 0 ? (
           <>
             {users.map((user, index) => (
-             <Link key={index} to={`/workspaces/${workspaceID}/${user.id}`} className='link'> <img src={user.profile_image} className='member'/><p key={index}>{user.username}</p></Link>
+              <div key={index} onClick={() => onSelectUser(user)} className='link'>
+                <img src={user.profile_image} className='member'/>
+                <p key={index}>{user.username}</p>
+              </div>
             ))}
             <p>{users.length} miembros</p>
           </>

@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<WorkspacesScreen />} />
         <Route path="/workspaces/:workspaceID/:channelID" element={<ChanelsScreen />} />
         <Route path="/workspaces/new" element={<NewWorkspaceScreen />} />
-        <Route path="/workspaces/:workspaceID/:userID" element={<UserInfo />} />
+        <Route path="/workspaces/:workspaceID/user/:userID" element={<UserInfo />} />
       </Routes>
  
   )

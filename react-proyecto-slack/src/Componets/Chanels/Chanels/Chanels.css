@@ -7,6 +7,7 @@
     height: 90vh;
     width: 100%;
     justify-content: space-between;
+    overflow: scroll;
 }
 
 .channel .messages-header  {
