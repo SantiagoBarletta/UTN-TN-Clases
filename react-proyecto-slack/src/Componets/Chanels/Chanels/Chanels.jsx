@@ -5,10 +5,12 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaTrash } from "react-icons/fa";
 import NuevoMensajeForm from '../MensajeForm/NuevoMensajeForm';
 
-const ChannelMessages = () => {
+
+const Chanels = ({ search }) => {
   const { workspaceID, channelID } = useParams();
   const [messages, setMessages] = useState([]);
   const [channelName, setChannelName] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const storedWorkspaces = localStorage.getItem('workspaces');
@@ -23,6 +25,7 @@ const ChannelMessages = () => {
           setChannelName(foundChannel.name);
         }
       }
+      setIsLoading(false);
     } else {
       obtenerWorkspaces()
         .then((data) => {
@@ -38,7 +41,6 @@ const ChannelMessages = () => {
             }
           }
         })
-        .catch((error) => console.error('Error fetching workspaces:', error));
     }
   }, [workspaceID, channelID]);
 
@@ -60,19 +62,34 @@ const ChannelMessages = () => {
     }
   };
 
+  const resaltarBusqueda = (message, busqueda) => {
+    if (!busqueda) return message;
+
+    const letras = message.split(new RegExp(`(${busqueda})`, 'gi'));
+    return letras.map((letra, index) =>
+      letra.toLowerCase() === busqueda.toLowerCase() ? (
+        <span key={index} style={{ backgroundColor: 'yellow', color: 'black' }}>{letra}</span>
+      ) : (
+        letra
+      )
+    );
+  };
+
   return (
     <div className='channel'>
       <div className='messages-header'>
         <h2># {channelName} <IoIosArrowDown className='arrow' /></h2>
       </div>
       <div className="messages">
-        {messages.length > 0 ? (
+        {isLoading ? (
+          <p>Cargando...</p>
+        ) : messages.length > 0 ? (
           messages.map((message) => (
             <div key={message.id} className="message">
               <img src={message.author_image} alt={message.author} className='avatar' />
               <div className="message-content">
                 <p><strong>{message.author}</strong> <span className="message-date">{new Date(message.date).toLocaleString()}</span></p>
-                <p className="message-text">{message.text}</p>
+                <p className="message-text">{resaltarBusqueda(message.text, search)}</p>
               </div>
               <button onClick={() => handleDeleteMessage(message.id)} className="delete-button">
                 <FaTrash />
@@ -88,4 +105,4 @@ const ChannelMessages = () => {
   );
 };
 
-export default ChannelMessages;
+export default Chanels;

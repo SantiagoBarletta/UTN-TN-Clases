@@ -7,10 +7,14 @@
 }
 
 .form-busqueda input {
-  width: 100%;
+  background-color: #6D4E72;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  outline: none;
-  font-size: 0.5rem;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 800px;
+  flex: 1;
   
 }
