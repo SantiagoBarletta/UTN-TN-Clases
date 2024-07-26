@@ -4,12 +4,13 @@ import "./ChanelsAside.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { TiArrowSortedDown } from "react-icons/ti";
 
-const ChanelsAside = ({ onSelectUser }) => {
+const ChanelsAside = ({ onSelectUser, viewInfo, setViewInfo }) => {
   const { workspaceID , channelID } = useParams();
   const [workspace, setWorkspace] = useState(null);
   const [channels, setChannels] = useState([]);
   const [users, setUsers] = useState([]);
   const [workspaceName, setWorkspaceName] = useState('');
+  
 
   useEffect(() => {
     const storedWorkspaces = localStorage.getItem('workspaces');
@@ -43,7 +44,7 @@ const ChanelsAside = ({ onSelectUser }) => {
         {users.length > 0 ? (
           <>
             {users.map((user, index) => (
-              <div key={index} onClick={() => onSelectUser(user)} className='link'>
+              <div key={index} onClick={() => { setViewInfo('infoContainer'); onSelectUser(user); }} className='link' >
                 <img src={user.profile_image} className='member'/>
                 <p key={index}>{user.username}</p>
               </div>
@@ -53,6 +54,12 @@ const ChanelsAside = ({ onSelectUser }) => {
         ) : (
           <p>No hay miembros en este workspace</p>
         )}
+      </div>
+      <div className="create-channel">
+        <h3><TiArrowSortedDown className='arrow'/>Crear canal</h3>
+        <Link to={`/workspaces/${workspaceID}/new-channel`} className='link'>
+          <p>Crear canal</p>
+        </Link>
       </div>
     </div>
   );

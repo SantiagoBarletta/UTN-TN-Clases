@@ -6,11 +6,14 @@ import { FaTrash } from "react-icons/fa";
 import NuevoMensajeForm from '../MensajeForm/NuevoMensajeForm';
 import UserInfo from '../../Users/UserInfo';
 
-const Chanels = ({ search, selectedUser }) => {
+const Chanels = ({ search, selectedUser, viewInfo, setViewInfo }) => {
   const { workspaceID, channelID } = useParams();
   const [messages, setMessages] = useState([]);
   const [channelName, setChannelName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  
+
+
 
   useEffect(() => {
     const storedWorkspaces = localStorage.getItem('workspaces');
@@ -77,16 +80,18 @@ const Chanels = ({ search, selectedUser }) => {
 
   return (
     <div className='channel'>
-      <UserInfo user={selectedUser} workspaceID={workspaceID} channelID={channelID}/>
       <div className='messages-header'>
         <h2># {channelName} <IoIosArrowDown className='arrow' /></h2>
       </div>
+      <main className="messages container">
+      { selectedUser && <UserInfo user={selectedUser} workspaceID={workspaceID} channelID={channelID} className={viewInfo} viewInfo={viewInfo} setViewInfo={setViewInfo}/>}
       <div className="messages">
         {isLoading ? (
           <p>Cargando...</p>
         ) : messages.length > 0 ? (
           messages.map((message) => (
             <div key={message.id} className="message">
+              
               <img src={message.author_image} alt={message.author} className='avatar' />
               <div className="message-content">
                 <p><strong>{message.author}</strong> <span className="message-date">{new Date(message.date).toLocaleString()}</span></p>
@@ -101,6 +106,7 @@ const Chanels = ({ search, selectedUser }) => {
           <p className="no-messages">No hay mensajes en este canal</p>
         )}
       </div>
+      </main>
       <NuevoMensajeForm onNewMessage={handleNewMessage} />
       
     </div>
