@@ -69,3 +69,35 @@
     border-radius: 3px;
     
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .workspace-item .datos {
+        flex: 1;
+    }
+    .workspace-item .flecha {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .workspace-item .members {
+      display: none;
+    }
+
+    .workspace-item .flecha {
+      display: none;
+    }
+
+    .workspace-item .datos .name {
+        
+        font-size: 16px;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+    }
+  }

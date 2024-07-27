@@ -10,6 +10,8 @@ import ChanelsAside from "./Chanels/ChanelsAside/ChanelsAside"
 import ChanelsHeader from "./Chanels/ChanelsHeader/ChanelsHeader"
 import NuevoMensajeForm from "./Chanels/MensajeForm/NuevoMensajeForm"
 import FormBusquedaMensajes from "./Chanels/FormBusquedaMensajes/FormBusquedaMensajes"
+import NewChannel from "./Chanels/NewChannel/NewChannel"
+
 
 
 
@@ -25,7 +27,8 @@ export {
     ChanelsAside, 
     ChanelsHeader, 
     NuevoMensajeForm,
-    FormBusquedaMensajes
+    FormBusquedaMensajes,
+    NewChannel
 }
 
 

@@ -5,13 +5,12 @@ import { IoIosArrowDown } from "react-icons/io";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const ChanelsAside = ({ onSelectUser, viewInfo, setViewInfo }) => {
-  const { workspaceID , channelID } = useParams();
+  const { workspaceID, channelID } = useParams();
   const [workspace, setWorkspace] = useState(null);
   const [channels, setChannels] = useState([]);
   const [users, setUsers] = useState([]);
   const [workspaceName, setWorkspaceName] = useState('');
   
-
   useEffect(() => {
     const storedWorkspaces = localStorage.getItem('workspaces');
     
@@ -38,6 +37,11 @@ const ChanelsAside = ({ onSelectUser, viewInfo, setViewInfo }) => {
             <p key={channel.id}># {channel.name}</p></Link>
           ))
         }
+        <div className="create-channel">
+          <Link to={`/workspaces/${workspaceID}/new-channel`} className='link'>
+            <p>Crear canal</p>
+          </Link>
+        </div>
       </div>
       <div className="members">
         <h3><TiArrowSortedDown className='arrow'/>Miembros</h3>
@@ -54,12 +58,6 @@ const ChanelsAside = ({ onSelectUser, viewInfo, setViewInfo }) => {
         ) : (
           <p>No hay miembros en este workspace</p>
         )}
-      </div>
-      <div className="create-channel">
-        <h3><TiArrowSortedDown className='arrow'/>Crear canal</h3>
-        <Link to={`/workspaces/${workspaceID}/new-channel`} className='link'>
-          <p>Crear canal</p>
-        </Link>
       </div>
     </div>
   );

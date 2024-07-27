@@ -71,3 +71,44 @@
     background-color: #fafafa;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+
+    .workspace-list {
+      max-width: 90%;
+      margin: 0 ;
+    }
+
+    .workspaces-add{
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+
+    .workspace-list {
+      max-width: 95%;
+      margin: 0 ;
+    }
+
+    .workspaces-add {
+      max-width: 90%;
+      margin: 0;
+    }
+
+    .workspaces-add p{
+      font-size: 14px;
+    }
+
+    .workspaces-add img{
+      display: none;
+    }
+
+    .workspaces-add button{
+      font-size: 14px;
+    }
+    
+  }

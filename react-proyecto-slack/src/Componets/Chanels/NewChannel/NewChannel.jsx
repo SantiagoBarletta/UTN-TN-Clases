@@ -1,87 +1,76 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './NewChannel.css';
 
-function NewChannel() {
-  const [name, setName] = useState('');
+const NewChannel = () => {
+  const { workspaceID } = useParams();
   const [channelName, setChannelName] = useState('');
   const [redirect, setRedirect] = useState(false);
+  const [newChannelId, setNewChannelId] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name && channelName) {
+    if (channelName) {
       const storedWorkspaces = JSON.parse(localStorage.getItem('workspaces')) || [];
+      const workspaceEncontrado = storedWorkspaces.find(ws => ws.id === workspaceID);
       
-      // Generar ID para el nuevo workspace
-      const NewChannelId = `W00${storedWorkspaces.length ? parseInt(storedWorkspaces[storedWorkspaces.length - 1].id.substring(3)) + 1 : 1}`;
-      
-      // Generar ID correlativo para el nuevo canal
-      let highestChannelIdNumber = 0;
-      storedWorkspaces.forEach(workspace => {
-        workspace.channels.forEach(channel => {
+      if (workspaceEncontrado) {
+        // Generar ID correlativo para el nuevo canal
+        let highestChannelIdNumber = 0;
+        workspaceEncontrado.channels.forEach(channel => {
           const channelIdNumber = parseInt(channel.id.substring(3));
           if (channelIdNumber > highestChannelIdNumber) {
             highestChannelIdNumber = channelIdNumber;
           }
         });
-      });
-      const newChannelId = `C00${highestChannelIdNumber + 1}`;
+        const newChannelId = `C00${highestChannelIdNumber + 1}`;
+        setNewChannelId(newChannelId);
 
-      // Crear el nuevo workspace con el nuevo canal
-      const NewChannel = {
-        id: NewChannelId,
-        name: name,
-        image: '/Imagenes/default-image.png',
-        users: [],
-        creation_date: new Date().toISOString(),
-        channels: [
-          {
-            id: newChannelId,
-            name: channelName
-          }
-        ]
-      };
-      const updatedWorkspaces = [...storedWorkspaces, NewChannel];
-      localStorage.setItem('workspaces', JSON.stringify(updatedWorkspaces));
-      setRedirect(true);
+        // Crea nuevo canal
+        const newChannel = {
+          id: newChannelId,
+          name: channelName,
+          messages: []
+        };
+
+        // Actualiza el workspace con el nuevo canal
+        workspaceEncontrado.channels.push(newChannel);
+        localStorage.setItem('workspaces', JSON.stringify(storedWorkspaces));
+        setRedirect(true);
+      }
     }
   };
 
   useEffect(() => {
     if (redirect) {
-      window.location.href = '/';
+      window.location.href = `/workspaces/${workspaceID}/${newChannelId}`;
     }
-  }, [redirect]);
+  }, [redirect, workspaceID, newChannelId]);
 
   return (
-    <div className='new-workspace-container'>
-      <form onSubmit={handleSubmit} className='form-new-workspace'>
+    <div className='main-container-new-channel'>
+    <div className='new-channel-container'>
+      <form onSubmit={handleSubmit} className='form-new-channel'>
         <div>
-          <label>Nombre del Workspace:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            placeholder='P.Ej.: Monstruos Alienigenas'
-          />
-        </div>
-        <div>
-          <label>Canal:</label>
+          <label>Nombre del Canal:</label>
           <input
             type="text"
             value={channelName}
             onChange={(e) => setChannelName(e.target.value)}
             required
+            placeholder='P.Ej.: General'
           />
         </div>
+        <p className='ayuda'>Los canales son el lugar donde se producen las conversaciones sobre un tema.
+          <br/>Usa un nombre que sea fácil de encontrar y comprender.</p>
         <div className='botones'>
-          <button type="submit">Agregar Workspace</button>
-          <Link to="/">Cancelar</Link>
+          <button type="submit">Crear Canal</button>
+          <Link to={`/workspaces/${workspaceID}/C001`}>Cancelar</Link>
         </div>
       </form>
     </div>
+  </div>
   );
-}
+};
 
 export default NewChannel;

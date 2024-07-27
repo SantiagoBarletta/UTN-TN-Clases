@@ -64,3 +64,29 @@
   .workspaces-header.search-visible .logo {
     display: none; 
   }
+
+   
+@media screen and (max-width: 768px) {
+  .workspaces-header{
+   max-width: 90%;
+   padding: 0 10px;
+  }
+  .workspaces-header .select{
+   font-size: 16px;
+  }
+  .workspaces-header .logo {
+   padding: 5px ;
+  }
+ }
+ 
+ @media screen and (max-width: 320px) {
+   .workspaces-header h2 span{
+     display: none;
+   }
+ 
+   .workspaces-header .select {
+    text-align: center;
+    font-size: 12px;
+   }
+ 
+ }

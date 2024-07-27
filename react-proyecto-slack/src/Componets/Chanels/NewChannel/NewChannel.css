@@ -1,4 +1,12 @@
-.new-workspace-container{
+.main-container-new-channel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.new-channel-container{
     display: flex;
     flex-direction: column;
     width: 700px;    
@@ -10,25 +18,21 @@
     padding: 20px;
 }
 
-.new-workspace-container input{
-    --saf-0: rgba(var(--sk_primary_foreground,29,28,29),.3);
+.new-channel-container input{
+    
     border: 1px solid var(--saf-0);
     box-sizing: border-box;
-    color: rgba(var(--sk_primary_foreground,29,28,29),1);
-    background-color: rgba(var(--sk_primary_background,255,255,255),1);
-    border-radius: 4px;
+    border-radius: 5px;
     width: 100%;
     height: 36px;
-    margin: 0 0 20px;
-      margin-bottom: 20px;
+    margin: 10px 0 10px;
     padding: 3px 12px 5px;
-      padding-right: 12px;
+    padding-right: 12px;
     font-size: 15px;
     line-height: normal;
-    transition: border 80ms ease-out,box-shadow 80ms ease-out;
 }
 
-.new-workspace-container .botones button{
+.new-channel-container .botones button{
     background-color: #4a154b;
     color: white;
     padding: 10px 20px;
@@ -43,15 +47,22 @@
     font-size: 15px;
 }
 
-.new-workspace-container .botones{
+.new-channel-container .botones{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.new-workspace-container form label{
+.new-channel-container form label{
     font-weight: 700;
     font-size: 20px;
 
     color: #4a154b;
 }
+
+.new-channel-container .ayuda{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #808080;}
